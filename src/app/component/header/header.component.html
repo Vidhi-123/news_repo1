@@ -62,7 +62,7 @@
 			</div>
 -->
 			<!-- /Top Header -->
-			
+
 			<!-- Center Header -->
 			<div id="center-header">
 				<div class="container col-12 ">
@@ -86,14 +86,14 @@
 							<a href="#" class="logo"><img src="../../assets/img/logo-alt.png" alt=""></a>
 						</div>
 						<ul class="main-nav nav navbar-nav">
-							<li class="active"><a href="#">Home</a></li>
-							<li><a href="/business">Buisness</a></li>
-							<li><a href="/entertainment">Entertainment</a></li>
-							<li><a href="/general">General</a></li>
-							<li><a href="/health">Health</a></li>
-							<li><a href="/science">Science</a></li>
-							<li><a href="/sports">Sports</a></li>
-							<li><a href="/technology">Technology</a></li>
+							<li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/"   >Home</a></li>
+							<li routerLinkActive="active"><a routerLink="/business" href="">Buisness</a></li>
+							<li routerLinkActive="active"><a routerLink="/entertainment" href="">Entertainment</a></li>
+							<li routerLinkActive="active"><a routerLink="/general" href="">General</a></li>
+							<li routerLinkActive="active"><a routerLink="/health" href="">Health</a></li>
+							<li routerLinkActive="active"><a routerLink="/science" href="">Science</a></li>
+							<li routerLinkActive="active"><a routerLink="/sports" href="">Sports</a></li>
+							<li routerLinkActive="active"><a routerLink="/technology" href="">Technology</a></li>
 						</ul>
 					</nav>
 					<div class="button-nav">
@@ -111,4 +111,5 @@
 		</header>
 
 </body>
+
 </html>
