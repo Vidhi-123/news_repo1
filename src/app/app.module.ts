@@ -16,6 +16,7 @@ import { HealthComponent } from './component/health/health.component';
 import { ScienceComponent } from './component/science/science.component';
 import { SportsComponent } from './component/sports/sports.component';
 import { TechnologyComponent } from './component/technology/technology.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { TechnologyComponent } from './component/technology/technology.component
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]

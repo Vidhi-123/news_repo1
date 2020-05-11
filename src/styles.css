@@ -1363,3 +1363,6 @@ textarea.input {
 	    -ms-transform:translateY(0px);
 	        transform:translateY(0px);
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
