@@ -9,7 +9,7 @@ import { HealthComponent } from "./component/health/health.component";
 import { ScienceComponent } from "./component/science/science.component";
 import { SportsComponent } from "./component/sports/sports.component";
 import { TechnologyComponent } from "./component/technology/technology.component";
-
+import { WeatherComponent } from "./component/weather/weather.component";
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'post/:itemName' , component: PostComponent},
@@ -20,7 +20,7 @@ const routes: Routes = [
   {path: 'science' , component: ScienceComponent},
   {path: 'sports' , component: SportsComponent},
   {path: 'technology' , component: TechnologyComponent},
-  
+  {path:'weather',component:WeatherComponent}
 ];
 
 @NgModule({

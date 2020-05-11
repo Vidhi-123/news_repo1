@@ -9,6 +9,7 @@ import { PostComponent } from './component/post/post.component';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { NewsService } from "./service/news.service";
+import { WeatherService} from "./service/weather.service";
 import { BusinessComponent } from './component/business/business.component';
 import { EntertainmentComponent } from './component/entertainment/entertainment.component';
 import { GeneralComponent } from './component/general/general.component';
@@ -17,6 +18,7 @@ import { ScienceComponent } from './component/science/science.component';
 import { SportsComponent } from './component/sports/sports.component';
 import { TechnologyComponent } from './component/technology/technology.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { WeatherComponent } from './component/weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HealthComponent,
     ScienceComponent,
     SportsComponent,
-    TechnologyComponent
+    TechnologyComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     BrowserAnimationsModule,
   ],
-  providers: [NewsService],
+  providers: [NewsService,WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
