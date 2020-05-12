@@ -208,8 +208,11 @@ this.newsService.getArticleByentertainment().subscribe(
   )
 
 
-  
-  
+
+
+
+
+
 }
 // searchArticle(source){
 //   this.newsService.getArticlesById(source).subscribe(data => this.articles=data['articles']);

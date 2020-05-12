@@ -20,6 +20,9 @@ import { TechnologyComponent } from './component/technology/technology.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WeatherComponent } from './component/weather/weather.component';
 
+import {MatCardModule} from '@angular/material/card';
+import { MatButtonModule } from "@angular/material/button";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +44,8 @@ import { WeatherComponent } from './component/weather/weather.component';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [NewsService,WeatherService],
   bootstrap: [AppComponent]

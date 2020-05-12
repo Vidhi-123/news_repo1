@@ -15,6 +15,6 @@ export class WeatherService {
   constructor(private http: HttpClient ) { }
   getInfo()
   {
-    return this.http.get('http://api.openweathermap.org/data/2.5/weather?q=vadodara&appid='+this.apikey);
+    return this.http.get('http://api.openweathermap.org/data/2.5/weather?q=ahmedabad&appid='+this.apikey);
   }
 }
