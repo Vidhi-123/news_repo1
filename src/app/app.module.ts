@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule  } from "@angular/common/http";
+import { AngularFireModule } from "angularfire2";
+export const firebaseConfig = environment.firebaseConfig;
+
+import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +26,8 @@ import { WeatherComponent } from './component/weather/weather.component';
 
 import {MatCardModule} from '@angular/material/card';
 import { MatButtonModule } from "@angular/material/button";
+import { environment } from 'src/environments/environment';
+import { GoogleMapComponent } from './component/google-map/google-map.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +43,8 @@ import { MatButtonModule } from "@angular/material/button";
     ScienceComponent,
     SportsComponent,
     TechnologyComponent,
-    WeatherComponent
+    WeatherComponent,
+    GoogleMapComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +52,12 @@ import { MatButtonModule } from "@angular/material/button";
     HttpClientModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AgmCoreModule.forRoot({
+      apiKey:environment.googleMapsApi
+    })
+
   ],
   providers: [NewsService,WeatherService],
   bootstrap: [AppComponent]
