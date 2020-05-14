@@ -28,6 +28,7 @@ import {MatCardModule} from '@angular/material/card';
 import { MatButtonModule } from "@angular/material/button";
 import { environment } from 'src/environments/environment';
 import { GoogleMapComponent } from './component/google-map/google-map.component';
+import { DesignComponent } from './component/design/design.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { GoogleMapComponent } from './component/google-map/google-map.component'
     SportsComponent,
     TechnologyComponent,
     WeatherComponent,
-    GoogleMapComponent
+    GoogleMapComponent,
+    DesignComponent
   ],
   imports: [
     BrowserModule,
