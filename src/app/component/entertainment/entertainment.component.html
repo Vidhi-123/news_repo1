@@ -1,104 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
 
-		<title>News Aggregator</title>
+	<div class="row" style="width: 95%;margin: auto;">
+		<div *ngFor="let item of entertainment;let i=index;">
+			
+			<div [class]="(((i%12)==3 || (i%12)==7 || (i%12)==11 ) && (i%12)>=3)?'col-md-6':((i%12)<3)?'col-md-4':'col-md-3'" >
 
-		<!-- Google font -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CLato:300,400" rel="stylesheet"> 
+
+
+				<mat-card class="example-card">
+					<a href="{{entertainment[i].url}}" target="_blank" style="text-decoration: none;color: black;">
 		
-		<!-- Bootstrap -->
-		<link type="text/css" rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+					<mat-card-header>
+					 
+					  <mat-card-title>{{entertainment[i].title}}</mat-card-title>
+					  <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+					</mat-card-header>
+					
+					<img mat-card-image src="{{entertainment[i].urlToImage}}" alt="Photo of a Shiba Inu">
+				
+					<mat-card-content>
+					  <p style="font-size: x-large;font-family: 'Times New Roman', Times, serif;">
+						{{entertainment[i].description}}
+					  </p>
+					</mat-card-content>
+					<mat-card-actions>
+					  <button mat-button color="primary">LIKE</button>
+					  <button mat-button color="primary">SHARE</button>
+					</mat-card-actions>
+				</a>
+				  </mat-card>
 
-		<!-- Owl Carousel -->
-		<link type="text/css" rel="stylesheet" href="../../assets/css/owl.carousel.css" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/owl.theme.default.css" />
-		<link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
-		<!-- Font Awesome Icon -->
-		<!-- <link rel="stylesheet" href="../../assets/css/font-awesome.min.css"> -->
 
-		<!-- Custom stlylesheet -->
-		<!-- <link type="text/css" rel="stylesheet" href="css/style.css"/> -->
 
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
 
-    </head>
-	<body>
-		<!--Owl Carousel 1 -->
-		
-		
-		
-		<!-- SECTION -->
-		<div class="section">
-			<!-- CONTAINER -->
-			<div class="container">
-				<!-- ROW -->
-				<div class="row">
-					<!-- Main Column -->
-					<div class="col-md-12">
-						<!-- row -->
-						<div class="row">
-							<!-- Column 1 -->
-							
-								<!-- section title -->
-								<!-- <div class="section-title">
-									<h2 class="title">Business</h2>
-								</div> -->
-								<!-- /section title -->
-								
-								<!-- ARTICLE -->
-								<article class="article" *ngFor="let article of entertainment">
-									<div class="article-img">
-										<a href="#">
-											<img  src="{{article.urlToImage}}" style="height:500px;">
-										</a>
-										<ul class="article-info">
-											<li class="article-type"><i class="fa fa-camera"></i></li>
-										</ul>
-									</div>
-									<div class="article-body">
-										<h3 class="article-title"><a href="#">{{article.title}}</a></h3>
-										<ul class="article-meta">
-											<a mat-button color="primary" href="{{article.url}}" target="_blank">Read more</a>
-										</ul>
-										<p>{{article.description}}</p>
-									</div>
-								</article>
-								<!-- /ARTICLE -->
-								
-						</div>
-						<!-- row end-->
-						
-						<!-- /row -->
+
+
+
+
+
+				<!-- <div class="card" style="border: 1px solid grey; padding: 20px;">
+					<div [class]="(((i%12)==3 || (i%12)==7 || (i%12)==11 ) && (i%12)>=3)?'col-md-8':''">
+					<img src="{{business[i].urlToImage}}"    class="card-img-top" alt="...">
 					</div>
-					<!-- /Main Column -->
+					<div [class]="(((i%12)==3 || (i%12)==7 || (i%12)==11 ) && (i%12)>=3)?'col-md-4':''">
+					<div class="card-body">
+					  <h3 class="card-title">{{business[i].title}}</h3>
+					  <p class="card-text">{{business[i].description}}</p>
+					  <p class="card-text"><small class="text-muted">{{business[i].publishedAt}}</small></p>
+					</div>
+					</div>
 					
-					<!-- Aside Column -->
-					
-					<!-- /Aside Column -->
-				</div>
-				<!-- /ROW -->
+				</div>	 -->
 			</div>
-			<!-- /CONTAINER -->
 		</div>
-		
-		
-		
-		<!-- jQuery Plugins -->
-		<script src="../../assets/js/jquery.min.js"></script>
-		<script src="../../assets/js/bootstrap.min.js"></script>
-		<script src="../../assets/js/owl.carousel.min.js"></script>
-		<script src="../../assets/js/main.js"></script>
+	</div>
 
-	</body>
+</body>
 </html>
 

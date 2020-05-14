@@ -1,11 +1,17 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
 
+</script>
+	
 		<header id="header" style="border:1px solid red">
+
 			
 			<div id="center-header">
 				<div class="container">
 					<div class="header-logo">
                         
-						<a href="#" class="logo"><img src="../../assets/img/logo.png" alt=""></a>
+						
+						
 					</div>
 
 					<div class="header-ads">
@@ -17,33 +23,36 @@
 			<!-- /Center Header -->
 			
 			<!-- Nav Header -->
-			<div id="nav-header">
+			
+			<div class="topnav" id="myTopnav">
 				<div class="container">
-					<nav id="main-nav">
-						<div class="nav-logo">
-							<a href="#" class="logo"><img src="../../assets/img/logo-alt.png" alt=""></a>
-						</div>
-						<ul class="main-nav nav navbar-nav">
-							<li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/"   >Home</a></li>
-							<li routerLinkActive="active"><a routerLink="/business" href="">Buisness</a></li>
-							<li routerLinkActive="active"><a routerLink="/entertainment" href="">Entertainment</a></li>
-							<li routerLinkActive="active"><a routerLink="/general" href="">General</a></li>
-							<li routerLinkActive="active"><a routerLink="/health" href="">Health</a></li>
-							<li routerLinkActive="active"><a routerLink="/science" href="">Science</a></li>
-							<li routerLinkActive="active"><a routerLink="/sports" href="">Sports</a></li>
-							<li routerLinkActive="active"><a routerLink="/technology" href="">Technology</a></li>
-						</ul>
-					</nav>
-					<div class="button-nav">
-						<button class="search-collapse-btn"><i class="fa fa-search"></i></button>
-						<button class="nav-collapse-btn"><i class="fa fa-bars"></i></button>
-						<div class="search-form">
-							<form>
-								<input class="input" type="text" name="search" placeholder="Search">
-							</form>
-						</div>
-					</div>
+				<a routerLink="/">Home</a>
+				<a routerLink="/business" href="">Buisness</a>
+				<a routerLink="/entertainment" href="">Entertainment</a>
+				<a routerLink="/general" href="">General</a>
+				<a routerLink="/health" href="">Health</a>
+				<a routerLink="/science" href="">Science</a>
+				<a routerLink="/sports" href="">Sports</a>
+				<a routerLink="/technology" href="">Technology</a>
+				
+				<a href="javascript:void(0);" class="icon" (click)="myFunction()">
+				  <i class="fa fa-bars"></i>
+				</a>
+				<a class="icon" (click)="flag=!flag"><i class="fa fa-search"></i></a>
+			
+				<div class="desktop-search-btn">
+					<a  (click)="flag=!flag"><i class="fa fa-search"></i></a>
 				</div>
+				
+			  </div>
+			  
+			  <div [class]="flag?'search-form search-collapse div1':'search-form'" >
+				<form>
+					<input class="input" type="text" name="search" placeholder="Search">
+				</form>
 			</div>
+			  </div>
+			  	
 			<!-- /Nav Header -->
 		</header>
+		

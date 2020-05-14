@@ -19,4 +19,10 @@
     {
         display: none;
     }
+    .article
+    {
+        height: 30em;
+        background-color: black;
+    }
+    
   } 

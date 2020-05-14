@@ -11,9 +11,12 @@ export class BusinessComponent implements OnInit {
 
   ngOnInit() {
     this.newsService.getArticleByBusiness().subscribe((data:any) =>{ 
+      console.log(data);
 
       for(let i=0;i<data.articles.length;i++)
       {
+        if(data.articles[i].description!=null)
+        {
         
         if(data.articles[i].description.length>=150)
         {
@@ -21,11 +24,12 @@ export class BusinessComponent implements OnInit {
           console.log(data.articles[i].description);
           this.business.push(data.articles[i]);
         }
+      
         else
         this.business.push(data.articles[i]);
       }
 
-
+    }
     });
     
   }
