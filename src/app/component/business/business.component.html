@@ -116,19 +116,19 @@
 </head>
 <body>
 
-	<div class="row" style="width: 95%;margin: auto;">
+	<!-- <div class="row" style="width: 95%;margin: auto;"> -->
 		<div *ngFor="let item of business;let i=index;">
 			
-			<div [class]="(((i%12)==3 || (i%12)==7 || (i%12)==11 ) && (i%12)>=3)?'col-md-6':((i%12)<3)?'col-md-4':'col-md-3'" >
+			<!-- <div [class]="(((i%12)==3 || (i%12)==7 || (i%12)==11 ) && (i%12)>=3)?'col-md-6':((i%12)<3)?'col-md-4':'col-md-3'" > -->
 
 
 
-				<mat-card class="example-card">
+				<!-- <mat-card class="example-card">
 					<a href="{{business[i].url}}" target="_blank" style="text-decoration: none;color: black;">
 					<mat-card-header>
 					 
 					  <mat-card-title>{{business[i].title}}</mat-card-title>
-					  <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+					  
 					</mat-card-header>
 					
 					<img mat-card-image src="{{business[i].urlToImage}}" alt="Photo of a Shiba Inu">
@@ -143,11 +143,28 @@
 					  <button mat-button color="primary">SHARE</button>
 					</mat-card-actions>
 				</a>
-				  </mat-card>
+				  </mat-card> -->
+				  <div class="box">
+					<!-- <a href="{{business[i].url}}"></a> -->
+					<div class="imgBx">
+						<!-- <img src="../../../assets/img/img-thumb-1.jpg"> -->
+						
+						<a  href="{{business[i].url}}" target="_blank">
+							<img src="{{business[i].urlToImage}}"  alt="Image Loading...">
+						</a>
+					</div>
+					<div class="content">
+						<h2  style="font-size: x-large;font-family: 'Times New Roman', Times, serif;">
+							{{business[i].description}}
+						</h2>
+					</div>
+				</div>
 
 
 
-
+			<!-- </div> -->
+		</div>
+	<!-- </div> -->
 
 
 
@@ -166,9 +183,9 @@
 					</div>
 					
 				</div>	 -->
-			</div>
+			<!-- </div>
 		</div>
-	</div>
+	</div> -->
 
 </body>
 </html>
