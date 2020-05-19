@@ -14,6 +14,8 @@ export class EntertainmentComponent implements OnInit {
 
       for(let i=0;i<data.articles.length;i++)
       {
+        if(data.articles[i].description!=null)
+        {
         
         if(data.articles[i].description.length>=150)
         {
@@ -25,7 +27,7 @@ export class EntertainmentComponent implements OnInit {
         this.entertainment.push(data.articles[i]);
       }
 
-
+    }
     });
     
   }

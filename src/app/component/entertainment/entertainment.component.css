@@ -21,7 +21,13 @@
     .example-card
     {
         height: 49em;
+        transition: transform .2s; 
         
+    }
+    .example-card:hover
+    {
+        transform: scale(1.05);
+        background-color:#20232e49;
     }
 
     .col-md-6 .example-card img{
