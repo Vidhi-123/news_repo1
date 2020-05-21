@@ -49,5 +49,53 @@ export class NewsService {
   {
     return this.http.get('http://newsapi.org/v2/everything?q=Psychology&apiKey='+this.apikey);
   }
+  getArticleByCovid()
+  {
+    return this.http.get('http://newsapi.org/v2/everything?q=covid19&apiKey='+this.apikey);
+  }
+  getArticleByLifeStyle()
+  {
+    return this.http.get('http://newsapi.org/v2/everything?q=lifestyle&apiKey='+this.apikey);
+  }
+  getArticleByStartups()
+  {
+    return this.http.get('http://newsapi.org/v2/everything?q=startups&apiKey='+this.apikey);
+  }
+  getArticleByScience()
+  {
+    return this.http.get('http://newsapi.org/v2/everything?q=science&apiKey='+this.apikey);
+  }
+  getArticleByPolitics()
+  {
+    return this.http.get('http://newsapi.org/v2/everything?q=politics&apiKey='+this.apikey);
+  }
+  getArticleByFinance()
+  {
+    return this.http.get('http://newsapi.org/v2/everything?q=finance&apiKey='+this.apikey);
+  }
+  getArticleByFood()
+  {
+    return this.http.get('http://newsapi.org/v2/everything?q=food&apiKey='+this.apikey);
+  }
+  getArticleByTravel()
+  {
+    return this.http.get('http://newsapi.org/v2/everything?q=travel&apiKey='+this.apikey);
+  }
+  getArticleByFashion()
+  {
+    return this.http.get('http://newsapi.org/v2/everything?q=fashion&apiKey='+this.apikey);
+  }
+  getArticleByInvesting()
+  {
+    return this.http.get('http://newsapi.org/v2/everything?q=investing&apiKey='+this.apikey);
+  }
+   getArticleByStock()
+  {
+    return this.http.get('http://newsapi.org/v2/everything?q=stockmarket&apiKey='+this.apikey);
+  }
+   getArticleByMovies()
+  {
+    return this.http.get('http://newsapi.org/v2/everything?q=movies&apiKey='+this.apikey);
+  }
 }
 
