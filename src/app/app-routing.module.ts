@@ -12,6 +12,7 @@ import { TechnologyComponent } from "./component/technology/technology.component
 import { WeatherComponent } from "./component/weather/weather.component";
 import { GoogleMapComponent } from './component/google-map/google-map.component';
 import { DesignComponent } from './component/design/design.component';
+import { InterestComponent } from './component/interest/interest.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'post/:itemName' , component: PostComponent},
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path: 'technology' , component: TechnologyComponent},
   {path:'weather',component:WeatherComponent},
   {path:'map',component:GoogleMapComponent},
-  {path:'design',component:DesignComponent},
+  {path:'design/:name',component:DesignComponent},
+  {path:'interest',component:InterestComponent},
 
 ];
 

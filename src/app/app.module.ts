@@ -29,6 +29,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { environment } from 'src/environments/environment';
 import { GoogleMapComponent } from './component/google-map/google-map.component';
 import { DesignComponent } from './component/design/design.component';
+import { InterestComponent } from './component/interest/interest.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { DesignComponent } from './component/design/design.component';
     TechnologyComponent,
     WeatherComponent,
     GoogleMapComponent,
-    DesignComponent
+    DesignComponent,
+    InterestComponent
   ],
   imports: [
     BrowserModule,

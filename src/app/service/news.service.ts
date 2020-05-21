@@ -34,8 +34,20 @@ export class NewsService {
   {
     return this.http.get('https://newsapi.org/v2/top-headlines?country=in&apiKey='+this.apikey+'&category=technology');
   }
-  getArticlesById(source: string){
-    return this.http.get('http://newsapi.org/v2/top-headlines?sources'+ source+'&apiKey='+this.apikey);
+  // getArticlesById(source: string){
+  //   return this.http.get('http://newsapi.org/v2/top-headlines?sources'+ source+'&apiKey='+this.apikey);
+  // }
+  getArticleByYoga()
+  {
+    return this.http.get('http://newsapi.org/v2/everything?q=yoga&apiKey='+this.apikey);
+  }
+  getArticleByTrump()
+  {
+    return this.http.get('http://newsapi.org/v2/everything?q=trump&apiKey='+this.apikey);
+  }
+  getArticleByPsychology()
+  {
+    return this.http.get('http://newsapi.org/v2/everything?q=Psychology&apiKey='+this.apikey);
   }
 }
 
