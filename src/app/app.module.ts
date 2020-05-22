@@ -30,6 +30,8 @@ import { environment } from 'src/environments/environment';
 import { GoogleMapComponent } from './component/google-map/google-map.component';
 import { DesignComponent } from './component/design/design.component';
 import { InterestComponent } from './component/interest/interest.component';
+import { AddSourcePageComponent } from './component/add-source-page/add-source-page.component';
+import { SourcePageDetailComponent } from './component/source-page-detail/source-page-detail.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { InterestComponent } from './component/interest/interest.component';
     WeatherComponent,
     GoogleMapComponent,
     DesignComponent,
-    InterestComponent
+    InterestComponent,
+    AddSourcePageComponent,
+    SourcePageDetailComponent
   ],
   imports: [
     BrowserModule,
