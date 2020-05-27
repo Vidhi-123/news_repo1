@@ -1,0 +1,43 @@
+@media only screen and (max-width: 600px) {
+    
+    img
+    {
+        height: 13em;
+        
+    }
+    
+    .col-md-4,.col-md-3,.col-md-6
+    {
+        padding-top: 20px;
+    }
+  } 
+  @media only screen and (min-width: 600px) {
+    
+    .col-md-4,.col-md-3,.col-md-6
+    {
+        padding-top: 80px;
+    }
+
+    .example-card
+    {
+        height: 57em;
+        transition: transform .2s; 
+        
+    }
+    .example-card:hover
+    {
+        transform: scale(1.05);
+        background-color:#20232e49;
+    }
+
+    .col-md-6 .example-card img{
+        height: 26em;
+    }
+
+    .col-md-4 .example-card img{
+        height: 22em;
+    }
+    .col-md-3 .example-card img{
+        height: 16em;
+    }
+}

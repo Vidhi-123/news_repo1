@@ -14,6 +14,7 @@ import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { NewsService } from "./service/news.service";
 import { WeatherService} from "./service/weather.service";
+import { CountryService } from "./service/country.service"
 import { BusinessComponent } from './component/business/business.component';
 import { EntertainmentComponent } from './component/entertainment/entertainment.component';
 import { GeneralComponent } from './component/general/general.component';
@@ -33,6 +34,8 @@ import { InterestComponent } from './component/interest/interest.component';
 import { AddSourcePageComponent } from './component/add-source-page/add-source-page.component';
 import { SourcePageDetailComponent } from './component/source-page-detail/source-page-detail.component';
 import { DesignForNewsComponent } from './component/design-for-news/design-for-news.component';
+import { CountryComponent } from './component/country/country.component';
+import { CountrycatComponent } from './component/countrycat/countrycat.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +57,9 @@ import { DesignForNewsComponent } from './component/design-for-news/design-for-n
     InterestComponent,
     AddSourcePageComponent,
     SourcePageDetailComponent,
-    DesignForNewsComponent
+    DesignForNewsComponent,
+    CountryComponent,
+    CountrycatComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +74,7 @@ import { DesignForNewsComponent } from './component/design-for-news/design-for-n
     })
 
   ],
-  providers: [NewsService,WeatherService],
+  providers: [NewsService,WeatherService,CountryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
