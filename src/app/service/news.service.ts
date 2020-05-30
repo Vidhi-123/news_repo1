@@ -4,8 +4,8 @@ import { HttpClient  } from "@angular/common/http";
   providedIn: 'root'
 })
 export class NewsService {
-  apikey = '27e479dc85bd4901b77fa0ac80c7446a';
-  //another api key : - 8ec24b1c0bf64ac7817a3da65e708916
+  //apikey = '27e479dc85bd4901b77fa0ac80c7446a';
+apikey = '8ec24b1c0bf64ac7817a3da65e708916'
   constructor(private http: HttpClient  ) { }
   getGeneralArticles(){
     // return this.http.get('http://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey='+this.apikey);
