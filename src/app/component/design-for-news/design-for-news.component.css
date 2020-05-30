@@ -56,5 +56,5 @@ body{
 }
 .container .box:hover .contentBx
 {
-    transform: translateZ(80px) scaleY(1);
+    transform: translateZ(30px) scaleY(1);
 }
