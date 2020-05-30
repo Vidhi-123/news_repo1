@@ -12,6 +12,10 @@ import { TechnologyComponent } from "./component/technology/technology.component
 import { WeatherComponent } from "./component/weather/weather.component";
 import { GoogleMapComponent } from './component/google-map/google-map.component';
 import { DesignComponent } from './component/design/design.component';
+import { InterestComponent } from './component/interest/interest.component';
+import { AddSourcePageComponent } from './component/add-source-page/add-source-page.component';
+import { SourcePageDetailComponent } from './component/source-page-detail/source-page-detail.component';
+import { DesignForNewsComponent } from './component/design-for-news/design-for-news.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'post/:itemName' , component: PostComponent},
@@ -24,8 +28,11 @@ const routes: Routes = [
   {path: 'technology' , component: TechnologyComponent},
   {path:'weather',component:WeatherComponent},
   {path:'map',component:GoogleMapComponent},
-  {path:'design',component:DesignComponent},
-
+  {path:'design/:name',component:DesignComponent},
+  {path:'interest',component:InterestComponent},
+  {path:'addsource',component:AddSourcePageComponent},
+  {path:'sourcedetail/:name',component:SourcePageDetailComponent},
+  {path:'newsdesign',component:DesignForNewsComponent},
 ];
 
 @NgModule({

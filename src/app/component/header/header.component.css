@@ -42,11 +42,21 @@
   margin-right:200px;
 }
 
-
+.divWeather
+{
+  display:none;
+}
 
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
+  .divWeather
+  {
+    display:block;
+    padding:20px 0px 20px 40px;
+     /* margin: 20px auto   20px auto; */
+    
+  }
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -76,4 +86,5 @@
     display: block;
     text-align: left;
   }
+
 }

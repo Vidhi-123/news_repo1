@@ -21,7 +21,7 @@ import { HealthComponent } from './component/health/health.component';
 import { ScienceComponent } from './component/science/science.component';
 import { SportsComponent } from './component/sports/sports.component';
 import { TechnologyComponent } from './component/technology/technology.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WeatherComponent } from './component/weather/weather.component';
 
 import {MatCardModule} from '@angular/material/card';
@@ -29,6 +29,10 @@ import { MatButtonModule } from "@angular/material/button";
 import { environment } from 'src/environments/environment';
 import { GoogleMapComponent } from './component/google-map/google-map.component';
 import { DesignComponent } from './component/design/design.component';
+import { InterestComponent } from './component/interest/interest.component';
+import { AddSourcePageComponent } from './component/add-source-page/add-source-page.component';
+import { SourcePageDetailComponent } from './component/source-page-detail/source-page-detail.component';
+import { DesignForNewsComponent } from './component/design-for-news/design-for-news.component';
 
 @NgModule({
   declarations: [
@@ -46,13 +50,17 @@ import { DesignComponent } from './component/design/design.component';
     TechnologyComponent,
     WeatherComponent,
     GoogleMapComponent,
-    DesignComponent
+    DesignComponent,
+    InterestComponent,
+    AddSourcePageComponent,
+    SourcePageDetailComponent,
+    DesignForNewsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule,
+    
     MatCardModule,
     MatButtonModule,
     AngularFireModule.initializeApp(firebaseConfig),
