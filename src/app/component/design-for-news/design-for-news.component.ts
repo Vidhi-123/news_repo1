@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AOS } from "aos";
+declare var require: any
+const VanillaTilt = require('vanilla-tilt');
+
+
 @Component({
   selector: 'app-design-for-news',
   templateUrl: './design-for-news.component.html',
@@ -10,7 +13,11 @@ export class DesignForNewsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    AOS.init();
+    VanillaTilt.init(document.querySelectorAll(".box"), {
+      max: 25,
+      speed: 400
+    });
+
   }
 
 }
