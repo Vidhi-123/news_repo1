@@ -7,8 +7,8 @@ import { NewsService } from 'src/app/service/news.service';
   styleUrls: ['./design.component.css']
 })
 export class DesignComponent implements OnInit {
-  item:string;
-  
+  item1:string;
+  news:Array<any>=[];
   yoga: Array<any>=[];
   donaldTrump: Array<any>=[];
   Psychology: Array<any>=[];
@@ -27,8 +27,8 @@ export class DesignComponent implements OnInit {
   constructor(private act_router:ActivatedRoute,private newsService:NewsService) { }
 
   ngOnInit() {
-    this.item = this.act_router.snapshot.params["name"];
-    //console.log(this.item);
+    this.item1 = this.act_router.snapshot.params["name"];
+    //console.log(this.item1);
     this.newsService.getArticleByYoga().subscribe((data:any) =>{ 
       //console.log(data);
 
@@ -345,6 +345,76 @@ export class DesignComponent implements OnInit {
 
     }
     });
+    if(this.item1=='yoga')
+    {
+      this.news=this.yoga;
+    }
+    else if(this.item1=='covid')
+    {
+      this.news=this.covid;
+    }
+    else if(this.item1=='Trump')
+    {
+      this.news=this.donaldTrump;
+    }
+    else if(this.item1=='lifestyle')
+    {
+      this.news=this.lifestyle;
+    }
+    else if(this.item1=='startups')
+    {
+      this.news=this.startups;
+    }
+    else if(this.item1=='startups')
+    {
+      this.news=this.startups;
+    }
+    else if(this.item1=='Psychology')
+    {
+      this.news=this.Psychology;
+    }
+    else if(this.item1=='science')
+    {
+      this.news=this.science;
+    }
+    else if(this.item1=='politics')
+    {
+      this.news=this.politics;
+    }
+    else if(this.item1=='finance')
+    {
+      this.news=this.finance;
+    }
+    else if(this.item1=='food')
+    {
+      this.news=this.food;
+    }
+    else if(this.item1=='travel')
+    {
+      this.news=this.travel;
+    }
+    else if(this.item1=='fashion')
+    {
+      this.news=this.fashion;
+    }
+    else if(this.item1=='investing')
+    {
+      this.news=this.investing;
+    }
+    else if(this.item1=='stock')
+    {
+      this.news=this.stock;
+    }
+    else if(this.item1=='movies')
+    {
+      this.news=this.movies;
+    }
+    
+
+    
+
+    
   }
+ 
 
 }

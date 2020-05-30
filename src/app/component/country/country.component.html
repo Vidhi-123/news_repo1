@@ -8,12 +8,13 @@
 </head>
 
 <body>
-    <div class="container" *ngIf="item === 'abc-news'">
-        <div class="main-header">
-            <h1><span>Latest </span> abc news News</h1>
 
+    <div class="container" *ngIf="item === 'aus'">
+        <div class="main-header">
+            <h1><span>Latest </span> Australia News</h1>
+            
         </div>
-        <div *ngFor="let item of abcnews">
+        <div *ngFor="let item of aus">
             <a href="{{item.url}}" target="_blank" style="text-decoration: none;color: black;">
                 <div class="card">
                     <img src="{{item.urlToImage}}" alt="image loading">
@@ -28,13 +29,12 @@
         </div>
     </div>
 
-
-    <div class="container" *ngIf="item === 'bbc-news'">
+    <div class="container" *ngIf="item === 'usa'">
         <div class="main-header">
-            <h1><span>Latest </span> bbc news News</h1>
-
+            <h1><span>Latest </span> USA News</h1>
+            
         </div>
-        <div *ngFor="let item of bbcnews">
+        <div *ngFor="let item of usa">
             <a href="{{item.url}}" target="_blank" style="text-decoration: none;color: black;">
                 <div class="card">
                     <img src="{{item.urlToImage}}" alt="image loading">
@@ -49,13 +49,12 @@
         </div>
     </div>
 
-
-    <div class="container" *ngIf="item === 'buzzfeed'">
+    <div class="container" *ngIf="item === 'malaysia'">
         <div class="main-header">
-            <h1><span>Latest </span> buzzfeed News</h1>
-
+            <h1><span>Latest </span> Malaysia News</h1>
+            
         </div>
-        <div *ngFor="let item of buzzfeed">
+        <div *ngFor="let item of malaysia">
             <a href="{{item.url}}" target="_blank" style="text-decoration: none;color: black;">
                 <div class="card">
                     <img src="{{item.urlToImage}}" alt="image loading">
@@ -69,14 +68,12 @@
             </a>
         </div>
     </div>
-
-
-    <div class="container" *ngIf="item === 'cnn'">
+    <div class="container" *ngIf="item === 'france'">
         <div class="main-header">
-            <h1><span>Latest </span> cnn News</h1>
-
+            <h1><span>Latest </span> France News</h1>
+            
         </div>
-        <div *ngFor="let item of cnn">
+        <div *ngFor="let item of france">
             <a href="{{item.url}}" target="_blank" style="text-decoration: none;color: black;">
                 <div class="card">
                     <img src="{{item.urlToImage}}" alt="image loading">
@@ -90,14 +87,12 @@
             </a>
         </div>
     </div>
-
-
-    <div class="container" *ngIf="item === 'espn_cric_info'">
+    <div class="container" *ngIf="item === 'newzea'">
         <div class="main-header">
-            <h1><span>Latest </span> espn cric info News</h1>
-
+            <h1><span>Latest </span> New zealand News</h1>
+            
         </div>
-        <div *ngFor="let item of espn_cric_info">
+        <div *ngFor="let item of newzea">
             <a href="{{item.url}}" target="_blank" style="text-decoration: none;color: black;">
                 <div class="card">
                     <img src="{{item.urlToImage}}" alt="image loading">
@@ -111,14 +106,12 @@
             </a>
         </div>
     </div>
-
-
-    <div class="container" *ngIf="item === 'fox_news'">
+    <div class="container" *ngIf="item === 'rus'">
         <div class="main-header">
-            <h1><span>Latest </span> fox News</h1>
-
+            <h1><span>Latest </span> Russia News</h1>
+            
         </div>
-        <div *ngFor="let item of fox_news">
+        <div *ngFor="let item of rus">
             <a href="{{item.url}}" target="_blank" style="text-decoration: none;color: black;">
                 <div class="card">
                     <img src="{{item.urlToImage}}" alt="image loading">
@@ -132,14 +125,12 @@
             </a>
         </div>
     </div>
-
-
-    <div class="container" *ngIf="item === 'mtv_news'">
+    <div class="container" *ngIf="item === 'can'">
         <div class="main-header">
-            <h1><span>Latest </span> mtv News</h1>
-
+            <h1><span>Latest </span> Canada News</h1>
+            
         </div>
-        <div *ngFor="let item of mtv_news">
+        <div *ngFor="let item of can">
             <a href="{{item.url}}" target="_blank" style="text-decoration: none;color: black;">
                 <div class="card">
                     <img src="{{item.urlToImage}}" alt="image loading">
@@ -153,14 +144,12 @@
             </a>
         </div>
     </div>
-
-
-    <div class="container" *ngIf="item === 'nbc_news'">
+    <div class="container" *ngIf="item === 'jap'">
         <div class="main-header">
-            <h1><span>Latest </span> nbc News</h1>
-
+            <h1><span>Latest </span> Japan News</h1>
+            
         </div>
-        <div *ngFor="let item of nbc_news">
+        <div *ngFor="let item of jap">
             <a href="{{item.url}}" target="_blank" style="text-decoration: none;color: black;">
                 <div class="card">
                     <img src="{{item.urlToImage}}" alt="image loading">
@@ -174,13 +163,12 @@
             </a>
         </div>
     </div>
-
-    <div class="container" *ngIf="item === 'news24'">
+    <div class="container" *ngIf="item === 'china'">
         <div class="main-header">
-            <h1><span>Latest </span> news24 News</h1>
-
+            <h1><span>Latest </span> China News</h1>
+       
         </div>
-        <div *ngFor="let item of news24">
+        <div *ngFor="let item of china">
             <a href="{{item.url}}" target="_blank" style="text-decoration: none;color: black;">
                 <div class="card">
                     <img src="{{item.urlToImage}}" alt="image loading">
@@ -194,7 +182,6 @@
             </a>
         </div>
     </div>
-
 
 </body>
 
