@@ -1,9 +1,65 @@
 .centered {
-    color: white;
-    font-size:x-large;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight:bold;
-  }
+  color: white;
+  font-size:x-large;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+*{
+  margin: 0;
+  top: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* body{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  min-height: 100vh;
+} */
+.container
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform-style: preserve-3d;
+}
+.container .box
+{
+  position: relative;
+  width: 350px;
+  height: 200px;
+  margin: 60px 0;
+  background: #000;   
+  transform-style: preserve-3d;
+}
+.container .box:hover{
+  box-shadow: 0 50px 80px rgba(0, 0, 0, 0.2);
+}
+.container .box .imgBx
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.container .box .contentBx
+{
+  position: absolute;
+  width: 400px;
+  top:120%;
+  left: 10%;
+  right: 50px;
+  background: #fff;
+  transform: translateZ(20px) scaleY(0);
+  padding: 40px 25px;
+  transform-origin: top;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+}
+.container .box:hover .contentBx
+{
+  transform: translateZ(30px) scaleY(1);
+}
