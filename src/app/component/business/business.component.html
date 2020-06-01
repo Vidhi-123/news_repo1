@@ -1,112 +1,38 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-</head>
-<body>
-	
-
-		
-	<div class="row" style="border: 1px solid black ;width: 90%; margin: auto;">
-		
-		<div class="col-md-4" style="border: 1px solid red;">
-		<div class="card">
-			<img src="{{business[0].urlToImage}}"    class="card-img-top" alt="...">
-			<div class="card-body">
-			  <h5 class="card-title">{{business[0].title}}</h5>
-			  <p class="card-text">{{business[0].description}}</p>
-			  <p class="card-text"><small class="text-muted">{{business[0].publishedAt}}</small></p>
-			</div>
-		</div>
-		</div>
-		<div class="col-md-4" style="border: 1px solid red;">
-			<div class="card">
-				<img src="{{business[1].urlToImage}}"  class="card-img-top" alt="...">
-				<div class="card-body">
-				  <h5 class="card-title">{{business[1].title}}</h5>
-				  <p class="card-text">{{business[1].description}}</p>
-				  <p class="card-text"><small class="text-muted">{{business[1].publishedAt}}</small></p>
-				</div>
-		</div>
-		</div>
-		<div class="col-md-4" style="border: 1px solid red;">
-			<div class="card">
-				<img src="{{business[2].urlToImage}}"  class="card-img-top" alt="...">
-				<div class="card-body">
-				  <h5 class="card-title">{{business[2].title}}</h5>
-				  <p class="card-text">{{business[2].description}}.</p>
-				  <p class="card-text"><small class="text-muted">{{business[2].publishedAt}}</small></p>
-				</div>
-		</div>
-		</div>
-		
-
-		<div class="col-md-6" style="border: 1px solid green;">
-			
-			<div class="card">
-				<img src="../../../assets/img/img-sm-1.jpg"  class="card-img-top" alt="...">
-				<div class="card-body">
-				  <h5 class="card-title">Card title</h5>
-				  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-				  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-				</div>
-		</div>
-			  
-		</div>
-		<div class="col-md-3" style="border: 1px solid green;">
-			<div class="card">
-				<img src="../../../assets/img/img-sm-1.jpg"  class="card-img-top" alt="...">
-				<div class="card-body">
-				  <h3 class="card-title">Card title Card title Card title Card title Card title Card titleCard title Card title Card title</h3>
-				  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-				  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-				  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-				  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-				</div>
-		</div>
-		</div>
-		<div class="col-md-3" style="border: 1px solid green;">
-			<div class="card">
-				<img src="../../../assets/img/img-sm-1.jpg"  class="card-img-top" alt="...">
-				<div class="card-body">
-				  <h5 class="card-title">Card title</h5>
-				  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-				  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-				</div>
-		</div>
-		</div>
-
-
-		<div class="col-md-3" style="border: 1px solid blue; height:100px">
-		</div>
-		<div class="col-md-3" style="border: 1px solid blue; height:100px">
-		</div>
-		<div class="col-md-6" style="border: 1px solid blue; height:100px">
-		</div>
-
-		<div class="col-md-3" style="border: 1px solid lightcoral; height:100px">
-		</div>
-		<div class="col-md-6" style="border: 1px solid lightcoral; height:100px">
-		</div>
-		<div class="col-md-3" style="border: 1px solid lightcoral; height:100px">
-		</div>
-
-
-	
-	
-
-	</div>
-</body>
-</html> -->
-
-
-
-
-
 <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid">
+            
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card" *ngFor="let item of business">
+
+                            <div class="post-image">
+                                <img src="{{item.urlToImage}}" alt="" class="img-responsive">
+                            </div>
+                            <div class="news-content">
+                                <h2 class="post-header">{{item.title}}</h2>
+                                <p>{{item.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </section>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -149,7 +75,7 @@
 				</div>
 
 </body>
-</html>
+</html> -->
 
 
 
