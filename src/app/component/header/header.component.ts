@@ -22,6 +22,7 @@ flag:boolean=false;
 	}
   
   ngOnInit() {
+	
   }
 
 }

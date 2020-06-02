@@ -3,8 +3,13 @@
     .slide1
     {
         width:50%;
+        height: 100%;
         display: inline-block;
     }  
+    .slide1 .article-img
+    {
+        height: 100%;
+    }
     .mobile
     {
         display: none;
