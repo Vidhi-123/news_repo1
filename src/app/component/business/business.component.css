@@ -108,7 +108,7 @@ section
 .card .news-content
 {
     position: absolute;
-    bottom: -60px;
+    bottom: -50px;
     padding: 20px;
     background: #fff;
     transition: 0.5s;
