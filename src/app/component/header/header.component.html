@@ -175,19 +175,74 @@
           <li id="ho"><a routerLink="/" (click)="onClickHo()">Home</a></li>
           <li class="dropdown" id="drp">
             <a href="#" class="dropdown-toggle" (click)="onClickDrp()" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cateogry <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-  			<li><a routerLink="/business" href="">Buisness</a></li>
-				<li><a routerLink="/entertainment" href="">Entertainment</a></li>
-				<li><a routerLink="/general" href="">General</a></li>
-				<li><a routerLink="/health" href="">Health</a></li>
-				<li><a routerLink="/science" href="">Science</a></li>
-				<li><a routerLink="/sports" href="">Sports</a></li>
-				<li><a routerLink="/technology" href="">Technology</a></li>
-            </ul>
+            <ul class="dropdown-menu mega-menu " style="background-color:#333;color:white">
+
+
+
+
+              <div class="row">
+                <div class="col-md-4" >
+                  <p><strong class="sub-menu-heading">News Cateogries</strong></p>
+                 <li> <img src="../../../assets/img/header/undraw_finance_0bdk.svg" style="border-radius: 50%;" height="60px" width="60px"><a routerLink="/business" href="">Buisness</a></li>
+				          <li><img src="../../../assets/img/header/sports.svg" style="border-radius: 50%;" height="60px" width="60px"><a routerLink="/entertainment" href="">Sports</a></li>
+				          <li><img src="../../../assets/img/header/general.svg"  height="60px" width="60px" >&nbsp;&nbsp;<a routerLink="/general" href="">General</a></li>
+				          <li><img src="../../../assets/img/header/health.svg"  height="60px" width="60px" ><a routerLink="/health" href="">Health</a></li>
+				          <li><img src="../../../assets/img/header/science.svg"  height="60px" width="60px" ><a routerLink="/science" href="">Science</a></li>
+				          <li><img src="../../../assets/img/header/entertainment.svg"  height="60px" width="60px" ><a routerLink="/sports" href="">Entertainment</a></li>
+                  <li><img src="../../../assets/img/header/Technology.svg"  height="60px" width="60px" ><a routerLink="/technology" href="">Technology</a></li>
+                  
+                 
+                     </div>
+                    
+                <div class="col-md-4" style="border-right:1px solid white;border-left:1px solid white  ;">
+                  <p><strong class="sub-menu-heading">Channel</strong></p>
+                  <li><img src="../../../assets/img/abc.png"  height="50px" width="50px" ><a routerLink="/technology" href="">abc News</a></li>
+                  <li><img src="../../../assets/img/bbc.png"  height="50px" width="50px" ><a routerLink="/technology" href="">BBC News</a></li>
+                  <li><img src="../../../assets/img/buzzfeed.jpg"  height="50px" width="50px" ><a routerLink="/technology" href="">BuzzFeed News</a></li>
+                  <li><img src="../../../assets/img/cnn.png"  height="50px" width="50px" ><a routerLink="/technology" href="">CNN News</a></li>
+                  <li><img src="../../../assets/img/espn.png"  height="50px" width="50px" ><a routerLink="/technology" href="">ESPN News</a></li>
+                  <li><img src="../../../assets/img/fox.jpg"  height="50px" width="50px" ><a routerLink="/technology" href="">Fox News</a></li>
+                  <li><img src="../../../assets/img/mtv.png"  height="50px" width="50px" ><a routerLink="/technology" href="">MTv News</a></li>
+                  <li><img src="../../../assets/img/nbc.png"  height="50px" width="50px" ><a routerLink="/technology" href="">NBC News</a></li>
+                  <li><img src="../../../assets/img/news24.jpg"  height="50px" width="50px" ><a routerLink="/technology" href="">NEWS 24</a></li>
+                </div>
+                <div class="col-md-4">
+                  <p><strong class="sub-menu-heading">Country</strong></p>
+                  <li><img src="../../../assets/img/country/aus.png"  height="50px" width="60px" ><a routerLink="/technology" href="">Australia</a></li>
+                  <li><img src="../../../assets/img/country/usa.png"  height="50px" width="60px" ><a routerLink="/technology" href="">Usa</a></li>
+                  <li><img src="../../../assets/img/country/jap.png"  height="50px" width="60px" ><a routerLink="/technology" href="">Japan</a></li>
+                  <li><img src="../../../assets/img/country/russia.png"  height="50px" width="60px" ><a routerLink="/technology" href="">Russia</a></li>
+                  <li><img src="../../../assets/img/country/china.png"  height="50px" width="60px" ><a routerLink="/technology" href="">China</a></li>
+                  <li><img src="../../../assets/img/country/newzea.png"  height="50px" width="60px" ><a routerLink="/technology" href="">NewZeland</a></li>
+                  <li><img src="../../../assets/img/country/can.png"  height="50px" width="60px" ><a routerLink="/technology" href="">Canada</a></li>
+                  <li><img src="../../../assets/img/country/malaysia.png"  height="50px" width="60px" ><a routerLink="/technology" href="">Malaysia</a></li>
+                  <li><img src="../../../assets/img/country/france.png"  height="50px" width="60px" ><a routerLink="/technology" href="">France</a></li>
+                </div>
+              </div> 
+
+
+
+
+
+
+
+
+
+  			
+            </ul> 
+
+
+
+
+
+
+
+
+
+           
           </li>
           <li id="in"><a routerLink="/interest" (click)="onClickIn()">Intrest</a></li>
-          <li id="ch"><a routerLink="/addsource" (click)="onClickCh()">Channel</a></li>
-          <li id="con"><a routerLink="/countrycat"  (click)="OnClickCont()">Country</a></li>
+         
         </ul>
         <form class="navbar-form navbar-right">
           <div class="form-group">

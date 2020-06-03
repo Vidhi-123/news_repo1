@@ -1,3 +1,12 @@
+*{
+  font-size: large;
+}
+
+
+
+
+
+
 .collapse ul li a:hover
 {
     background-color: #EF233C;
@@ -9,13 +18,25 @@
   background-color: #EF233C;
   color: white;
 }
-.active
+/* .active
 {
   background-image: none;
   background-color: #EF233C;
   color: white;
-}
+} */
 
+
+/* CSS Document */
+.mega-menu{width: 1000px; overflow: hidden; padding: 10px;}
+.mega-menu a{text-decoration: none; color: white;}
+.mega-menu li{padding:10px;}
+.mega-menu li:hover{
+  background-color: #EF233C;
+}
+.mega-menu .sub-menu-heading{ color: white;}
+@media(max-width:500px){
+	.mega-menu{width: 300px;}
+}
 
 .divWeather
 {
