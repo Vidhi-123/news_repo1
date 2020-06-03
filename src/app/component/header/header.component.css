@@ -1,150 +1,21 @@
-/* @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
-body {
-  font-family: 'Open Sans', 'sans-serif';
-  background: #333;
-  background: url(https://pcbx.us/bfjb.jpg);
+.collapse ul li a:hover
+{
+    background-color: #EF233C;
+    color: white;
 }
-
-h1,
-.h1 {
-  font-size: 36px;
-  text-align: center;
-  font-size: 5em;
-  color: #404041;
-}
-
-.navbar-nav>li>.dropdown-menu {
-  margin-top: 20px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-}
-
-.navbar-default .navbar-nav>li>a {
-  width: 200px;
-  font-weight: bold;
-}
-
-.mega-dropdown {
-  position: static !important;
-  width: 100%;
-}
-
-.mega-dropdown-menu {
-  padding: 20px 0px;
-  width: 100%;
-  box-shadow: none;
-  -webkit-box-shadow: none;
-}
-
-.mega-dropdown-menu:before {
-  content: "";
-  border-bottom: 15px solid #333;
-  border-right: 17px solid transparent;
-  border-left: 17px solid transparent;
-  position: absolute;
-  top: -15px;
-  left: 285px;
-  z-index: 10;
-}
-
-
-.mega-dropdown-menu:after {
-  content: "";
-  border-bottom: 17px solid #333;
-  border-right: 19px solid transparent;
-  border-left: 19px solid transparent;
-  position: absolute;
-  top: -17px;
-  left: 283px;
-  z-index: 8;
-}
-
-.mega-dropdown-menu > li > ul {
-  padding: 0;
-  margin: 0;
-}
-
-.mega-dropdown-menu > li > ul > li {
-  list-style: none;
-}
-
-.mega-dropdown-menu > li > ul > li > a {
-  display: block;
-  padding: 3px 20px;
-  clear: both;
-  font-weight: normal;
-  line-height: 1.428571429;
-  color: #999;
-  white-space: normal;
-}
-
-
-
-.mega-dropdown-menu > li ul > li > a:hover,
-.mega-dropdown-menu > li ul > li > a:focus {
-  text-decoration: none;
-  color:white;
+.navbar-nav>.active>a
+{
+  background-image: none;
   background-color: #EF233C;
+  color: white;
 }
-
-.mega-dropdown-menu .dropdown-header {
-  color: #428bca;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.mega-dropdown-menu form {
-  margin: 3px 20px;
-}
-
-.mega-dropdown-menu .form-group {
-  margin-bottom: 3px;
-} */
-
-
-
-.topnav {
-  background-color: #333;
-  overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color:#EF233C;
-  color: black;
-}
-
-/* Add an active class to highlight the current page */
-.topnav a.active {
+.active
+{
+  background-image: none;
   background-color: #EF233C;
   color: white;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
-}
-.desktop-search-btn
-{
-  
-  display: inline;
-  float: right;
-
-}
-.div1{
-  margin-right:200px;
-}
 
 .divWeather
 {
@@ -161,34 +32,4 @@ h1,
      /* margin: 20px auto   20px auto; */
     
   }
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-  .desktop-search-btn
-{
- display:none;
-
-
-}
-.div1{
-  margin-right: 0;
-
-}
-}
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-
 }

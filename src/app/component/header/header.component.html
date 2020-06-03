@@ -1,192 +1,215 @@
 <!-- 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="navbar " id="myNavbar">
+  <div class="container">
+  <a href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#news">News</a>
+  <a href="#news">News</a>
+  <a href="#news">News</a>
+  <a href="#news">News</a>
+  <a href="#news">News</a>
+  <a href="#news">News</a>
+  <a href="#news">News</a>
 
-<script>
-	jQuery(document).on('click', '.mega-dropdown', function(e) {
-		e.stopPropagation()
-	  })
-</script>
-<div class="container">
-	<h1>News </h1>
-	<div style="background-color: #333;">
-  <nav class="navbar navbar-default" style="background-color: black;">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">MegaMenu</a>
-    </div>
-
-
-    <div class="collapse navbar-collapse js-navbar-collapse"  style="background-color: #333;color: white;">
-      <ul class="nav navbar-nav">
-        <li class="dropdown mega-dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Collection <span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
-
-          <ul class="dropdown-menu mega-dropdown-menu row">
-            <li class="col-sm-3">
-              <ul>
-                <li class="dropdown-header">New in Stores</li>
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="item active">
-                      <a href="#"><img src="http://placehold.it/254x150/3498db/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 1"></a>
-                      <h4><small>Summer dress floral prints</small></h4>
-                      <button class="btn btn-primary" type="button">49,99 €</button>
-                      <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
-                    </div>
-                   <div class="item">
-                      <a href="#"><img src="http://placehold.it/254x150/ef5e55/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 2"></a>
-                      <h4><small>Gold sandals with shiny touch</small></h4>
-                      <button class="btn btn-primary" type="button">9,99 €</button>
-                      <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
-                    </div>
-                    
-                    <div class="item">
-                      <a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 3"></a>
-                      <h4><small>Denin jacket stamped</small></h4>
-                      <button class="btn btn-primary" type="button">49,99 €</button>
-                      <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
-                    </div>
-                   
-                  </div>
-                 
-                </div>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="container-fluid">   
+      <div  class="row">
+        <div class="col-md-3">
+          <mat-card class="example-card" style="height: 80%;">
+            
+            <img mat-card-image src="https://pdfimages.wondershare.com/forms-templates/article/business-resume.jpg" alt="Photo of a Shiba Inu" height="500px">
+            
+          </mat-card>
+        </div>
+        <div class="col-md-9">
+          <div class="col-md-4">
+            <mat-card class="example-card" style="height: 40%;">
+            
+              <img mat-card-image src="https://image.shutterstock.com/image-vector/vector-creative-illustration-technology-word-260nw-446972785.jpg" alt="Photo of a Shiba Inu" >
               
-                <li class="divider"></li>
-                <li><a href="#">View all Collection <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
-              </ul>
-            </li>
-            <li class="col-sm-3">
-              <ul>
-                <li class="dropdown-header">Dresses</li>
-                <li><a href="#">Unique Features</a></li>
-                <li><a href="#">Image Responsive</a></li>
-                <li><a href="#">Auto Carousel</a></li>
-                <li><a href="#">Newsletter Form</a></li>
-                <li><a href="#">Four columns</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Tops</li>
-                <li><a href="#">Good Typography</a></li>
-              </ul>
-            </li>
-            <li class="col-sm-3">
-              <ul>
-                <li class="dropdown-header">Jackets</li>
-                <li><a href="#">Easy to customize</a></li>
-                <li><a href="#">Glyphicons</a></li>
-                <li><a href="#">Pull Right Elements</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Pants</li>
-                <li><a href="#">Coloured Headers</a></li>
-                <li><a href="#">Primary Buttons & Default</a></li>
-                <li><a href="#">Calls to action</a></li>
-              </ul>
-            </li>
-            <li class="col-sm-3">
-              <ul>
-                <li class="dropdown-header">Accessories</li>
-                <li><a href="#">Default Navbar</a></li>
-                <li><a href="#">Lovely Fonts</a></li>
-                <li><a href="#">Responsive Dropdown </a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Newsletter</li>
-                <form class="form" role="form">
-                  <div class="form-group">
-                    <label class="sr-only" for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email">
-                  </div>
-                  <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                </form>
-              </ul>
-            </li>
-          </ul>
+            </mat-card>
+          </div>
 
-        </li>
-      </ul>
+          <div class="col-md-4">
+            <mat-card class="example-card" style="height: 80%;">
+            
+              <img mat-card-image src="" alt="Photo of a Shiba Inu" >
+              
+            </mat-card>
+          </div>
 
+
+
+          <div class="col-md-4">
+            <mat-card class="example-card" style="height: 80%;">
+            
+              <img mat-card-image src="https://pdfimages.wondershare.com/forms-templates/article/business-resume.jpg" alt="Photo of a Shiba Inu" >
+              
+            </mat-card>
+          </div>
+
+
+
+
+          <div class="col-md-4">
+            <mat-card class="example-card" style="height: 80%;">
+            
+              <img mat-card-image src="https://wallpapercave.com/wp/ctB8jSn.jpg" alt="Photo of a Shiba Inu" >
+              
+            </mat-card>
+          </div>
+
+
+
+
+          <div class="col-md-4">
+            <mat-card class="example-card" style="height: 80%;">
+            
+              <img mat-card-image src="https://pdfimages.wondershare.com/forms-templates/article/business-resume.jpg" alt="Photo of a Shiba Inu" >
+              
+            </mat-card>
+          </div>
+
+
+
+
+
+
+          <div class="col-md-4">
+            <mat-card class="example-card" style="height: 80%;">
+            
+              <img mat-card-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ9LYdXZPDsK6-LYaeGW5r_nBDBoljlL8jNT2e9pzCnnh_6zNUf&usqp=CAU" alt="Photo of a Shiba Inu" >
+              
+            </mat-card>
+          </div>
+
+        </div>
+      </div >
     </div>
-  
-  </nav>
+    </div>
+  </div> 
+  <a href="javascript:void(0);" class="icon" (click)="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
+
 </div>
- -->
-
-
-
-
-
-
-
-
-
-
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script>
+ 
+  </script> -->
 
-</script>
-	
-		<header id="header" >
 
-			
-			<div id="center-header">
-				<div class="container">
-					<div class="header-logo">
-                        
-						
-						
-					</div>
 
-					<div class="header-ads">
-					<app-weather></app-weather> 
-					</div>
 
-				</div>
-			</div>
-			<!-- /Center Header -->
-			
-			<!-- Nav Header -->
-			
-			<div class="topnav" id="myTopnav">
-				<div class="container">
-				<a routerLink="/">Home</a>
-				<a routerLink="/business" href="">Buisness</a>
-				<a routerLink="/entertainment" href="">Entertainment</a>
-				<a routerLink="/general" href="">General</a>
-				<a routerLink="/health" href="">Health</a>
-				<a routerLink="/science" href="">Science</a>
-				<a routerLink="/sports" href="">Sports</a>
-				<a routerLink="/technology" href="">Technology</a>
-				<a routerLink="/interest" href="">Interest</a>
-				<a routerLink="/addsource" href="">Channel</a>
-				<a routerLink="/countrycat" href="">Country</a>
-				<!-- <a href="javascript:void(0);" class="icon" (click)="myFunction()">
-				  <i class="fa fa-bars"></i>
-				</a>
-				<a class="icon" (click)="flag=!flag"><i class="fa fa-search"></i></a>
-			
-				<div class="desktop-search-btn">
-					<a  (click)="flag=!flag"><i class="fa fa-search"></i></a>
-				</div>
-				
-			  </div>
-			  
-			  <div [class]="flag?'search-form search-collapse div1':'search-form'" >
-				<form>
-					<input class="input" type="text" name="search" placeholder="Search">
-				</form>
-			</div> -->
-				</div>
-			  </div>
-	<div class="divWeather">
-					<app-weather></app-weather>
-				</div>
-			   	
-			<!-- /Nav Header -->
-		</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+  
+  </script>
+    
+      <header id="header" >
+  
+        
+        <div id="center-header">
+          <div class="container">
+            <div class="header-logo">
+                          
+              
+              
+            </div>
+  
+            <div class="header-ads">
+            <app-weather></app-weather> 
+            </div>
+  
+          </div>
+        </div>
+  
+  
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          
+          <li id="ho"><a routerLink="/" (click)="onClickHo()">Home</a></li>
+          <li class="dropdown" id="drp">
+            <a href="#" class="dropdown-toggle" (click)="onClickDrp()" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cateogry <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+  			<li><a routerLink="/business" href="">Buisness</a></li>
+				<li><a routerLink="/entertainment" href="">Entertainment</a></li>
+				<li><a routerLink="/general" href="">General</a></li>
+				<li><a routerLink="/health" href="">Health</a></li>
+				<li><a routerLink="/science" href="">Science</a></li>
+				<li><a routerLink="/sports" href="">Sports</a></li>
+				<li><a routerLink="/technology" href="">Technology</a></li>
+            </ul>
+          </li>
+          <li id="in"><a routerLink="/interest" (click)="onClickIn()">Intrest</a></li>
+          <li id="ch"><a routerLink="/addsource" (click)="onClickCh()">Channel</a></li>
+          <li id="con"><a routerLink="/countrycat"  (click)="OnClickCont()">Country</a></li>
+        </ul>
+        <form class="navbar-form navbar-right">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  
+  
+
+
+  <div class="divWeather">
+    <app-weather></app-weather>
+  </div>
+     
+<!-- /Nav Header -->
+</header>
+  
+  
