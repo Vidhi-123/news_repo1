@@ -20,7 +20,7 @@ ngOnInit(): void {
 
 this.newsService.getGeneralArticles().subscribe(
     (data:any)=>{
-      console.log(data);
+     // console.log(data);
       
       
       
@@ -46,7 +46,7 @@ this.newsService.getGeneralArticles().subscribe(
             
             data.articles[i].title=data.articles[i].title.substr(0,40)+'...';  
             data.articles[i].description=data.articles[i].description.substr(0,100) + '...';
-            console.log(data.articles[i].description);
+           // console.log(data.articles[i].description);
             this.articles.push(data.articles[i]);
           }
           else

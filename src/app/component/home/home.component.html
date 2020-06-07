@@ -1,167 +1,180 @@
-
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>News Aggregator</title>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<!-- Google font -->
-		
-    </head>
-	<body>
+	<title>News Aggregator</title>
 
-		<!-- Owl Carousel 1 -->
-		<div id="myCarousel1" class="carousel slide desktop" data-ride="carousel">
-            
-            <ol class="carousel-indicators">
-              <li data-target="#myCarousel1" data-slide-to="0"  class="active"></li>
-              <li data-target="#myCarousel1" data-slide-to="1"></li>
-              <li data-target="#myCarousel1" data-slide-to="2"></li>
-            </ol>
-          
-            <!-- Wrapper for slides -->
-             <div class="carousel-inner">
-              <div class="item active">
-                <article class="article thumb-article slide1">
-                    <div class="article-img" >
-                        <img class="img-responsive" src="{{articles[5].urlToImage}}" alt="">
-                    </div>
-                    <div class="article-body">
-                        <ul class="article-info">
-							<li class="article-category"><a href="#">News</a></li>
-                            <li class="article-type"><i class="fa fa-camera"></i></li>
-                        </ul>
-                        <h2 class="article-title"><a href="#">{{articles[5].title}}</a></h2>
-                        <ul class="article-meta">
-                            <li><i class="fa fa-clock-o"></i> January 31, 2017</li>
-                            <li><i class="fa fa-comments"></i> 33</li>
-                        </ul>
-                    </div>
-                </article>
-              <!-- </div>
+	<!-- Google font -->
+
+</head>
+
+<body>
+
+	<!-- Owl Carousel 1 -->
+	<div id="myCarousel1" class="carousel slide desktop" data-ride="carousel">
+
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel1" data-slide-to="1"></li>
+			<li data-target="#myCarousel1" data-slide-to="2"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<a href={{articles[5].url}} target="_blank">
+					<article class="article thumb-article slide1">
+						<div class="article-img">
+							<img class="img-responsive" src="{{articles[5].urlToImage}}" alt="">
+						</div>
+						<div class="article-body">
+							<ul class="article-info">
+								<li class="article-category"><a href="#">News</a></li>
+								<li class="article-type"><i class="fa fa-camera"></i></li>
+							</ul>
+							<h2 class="article-title"><a href="#">{{articles[5].title}}</a></h2>
+							<ul class="article-meta">
+								<li><i class="fa fa-clock-o"></i> January 31, 2017</li>
+								<li><i class="fa fa-comments"></i> 33</li>
+							</ul>
+						</div>
+					</article>
+				</a>
+				<!-- </div>
           
               <div class="item"> -->
-                <article class="article thumb-article  slide1">
-                    <div class="article-img">
-                        <img src="{{articles[6].urlToImage}}" alt="">
-                    </div>
-                    <div class="article-body">
-                        <ul class="article-info">
-                            <li class="article-category"><a href="#">News</a></li>
-                            <li class="article-type"><i class="fa fa-camera"></i></li>
-                        </ul>
-                        <h2 class="article-title"><a href="#">{{articles[6].title}}</a></h2>
-                     <ul class="article-meta">
-                            <li><i class="fa fa-clock-o"></i> January 31, 2017</li>
-                            <li><i class="fa fa-comments"></i> 33</li>
-                        </ul>
-                    </div>
-                </article>
-              </div>
-		  
-			  <div class="item">
-                <article class="article thumb-article slide1">
-                    <div class="article-img" >
-                        <img class="img-responsive" src="{{articles[7].urlToImage}}" alt="">
-                    </div>
-                    <div class="article-body">
-                        <ul class="article-info">
-							<li class="article-category"><a href="#">News</a></li>
-                            <li class="article-type"><i class="fa fa-camera"></i></li>
-                        </ul>
-                        <h2 class="article-title"><a href="#">{{articles[7].title}}</a></h2>
-                        <ul class="article-meta">
-                            <li><i class="fa fa-clock-o"></i> January 31, 2017</li>
-                            <li><i class="fa fa-comments"></i> 33</li>
-                        </ul>
-                    </div>
-                </article>
-              <!-- </div>
-          
-              <div class="item"> -->
-                <article class="article thumb-article  slide1">
-                    <div class="article-img">
-                        <img src="{{articles[8].urlToImage}}" height="400px" alt="">
-                    </div>
-                    <div class="article-body">
-                        <ul class="article-info">
-                            <li class="article-category"><a href="#">News</a></li>
-                            <li class="article-type"><i class="fa fa-camera"></i></li>
-                        </ul>
-                        <h2 class="article-title"><a href="#">{{articles[8].title}}</a></h2>
-                        <ul class="article-meta">
-                            <li><i class="fa fa-clock-o"></i> January 31, 2017</li>
-                            <li><i class="fa fa-comments"></i> 33</li>
-                        </ul>
-                    </div>
-                </article>
-			  </div>
-			  
-			  <div class="item">
-                <article class="article thumb-article slide1">
-                    <div class="article-img" >
-                        <img class="img-responsive" src="{{articles[9].urlToImage}}" height="400px" alt="">
-                    </div>
-                    <div class="article-body">
-                        <ul class="article-info">
-							<li class="article-category"><a href="#">News</a></li>
-                            <li class="article-type"><i class="fa fa-camera"></i></li>
-                        </ul>
-                        <h2 class="article-title"><a href="#">{{articles[9].title}}</a></h2>
-                        <ul class="article-meta">
-                            <li><i class="fa fa-clock-o"></i> January 31, 2017</li>
-                            <li><i class="fa fa-comments"></i> 33</li>
-                        </ul>
-                    </div>
-                </article>
-              <!-- </div>
-          
-              <div class="item"> -->
-                <article class="article thumb-article  slide1">
-                    <div class="article-img">
-                        <img src="{{articles[10].urlToImage}}" alt="">
-                    </div>
-                    <div class="article-body">
-                        <ul class="article-info">
-                            <li class="article-category"><a href="#">News</a></li>
-                            <li class="article-type"><i class="fa fa-camera"></i></li>
-                        </ul>
-                        <h2 class="article-title"><a href="#">{{articles[10].title}}</a></h2>
-                        <ul class="article-meta">
-                            <li><i class="fa fa-clock-o"></i> January 31, 2017</li>
-                            <li><i class="fa fa-comments"></i> 33</li>
-                        </ul>
-                    </div>
-                </article>
-              </div>
-              
-			  
+				<a href={{articles[6].url}} target="_blank">
+					<article class="article thumb-article  slide1">
+						<div class="article-img">
+							<img src="{{articles[6].urlToImage}}" alt="">
+						</div>
+						<div class="article-body">
+							<ul class="article-info">
+								<li class="article-category"><a href="#">News</a></li>
+								<li class="article-type"><i class="fa fa-camera"></i></li>
+							</ul>
+							<h2 class="article-title"><a href="#">{{articles[6].title}}</a></h2>
+							<ul class="article-meta">
+								<li><i class="fa fa-clock-o"></i> January 31, 2017</li>
+								<li><i class="fa fa-comments"></i> 33</li>
+							</ul>
+						</div>
+					</article>
+				</a>
 			</div>
-			 <a class="left carousel-control" href="#myCarousel1" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel1" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
-              <span class="sr-only">Next</span>
-            </a>
-         </div>
-         
-		  
-		   
+
+			<div class="item">
+				<a href={{articles[7].url}} target="_blank">
+					<article class="article thumb-article slide1">
+						<div class="article-img">
+							<img class="img-responsive" src="{{articles[7].urlToImage}}" alt="">
+						</div>
+						<div class="article-body">
+							<ul class="article-info">
+								<li class="article-category"><a href="#">News</a></li>
+								<li class="article-type"><i class="fa fa-camera"></i></li>
+							</ul>
+							<h2 class="article-title"><a href="#">{{articles[7].title}}</a></h2>
+							<ul class="article-meta">
+								<li><i class="fa fa-clock-o"></i> January 31, 2017</li>
+								<li><i class="fa fa-comments"></i> 33</li>
+							</ul>
+						</div>
+					</article>
+				</a>
+				<!-- </div>
+          
+              <div class="item"> -->
+				<a href={{articles[8].url}} target="_blank">
+					<article class="article thumb-article  slide1">
+						<div class="article-img">
+							<img src="{{articles[8].urlToImage}}" height="400px" alt="">
+						</div>
+						<div class="article-body">
+							<ul class="article-info">
+								<li class="article-category"><a href="#">News</a></li>
+								<li class="article-type"><i class="fa fa-camera"></i></li>
+							</ul>
+							<h2 class="article-title"><a href="#">{{articles[8].title}}</a></h2>
+							<ul class="article-meta">
+								<li><i class="fa fa-clock-o"></i> January 31, 2017</li>
+								<li><i class="fa fa-comments"></i> 33</li>
+							</ul>
+						</div>
+					</article>
+				</a>
+			</div>
+
+			<div class="item">
+				<a href={{articles[9].url}} target="_blank">
+					<article class="article thumb-article slide1">
+						<div class="article-img">
+							<img class="img-responsive" src="{{articles[9].urlToImage}}" height="400px" alt="">
+						</div>
+						<div class="article-body">
+							<ul class="article-info">
+								<li class="article-category"><a href="#">News</a></li>
+								<li class="article-type"><i class="fa fa-camera"></i></li>
+							</ul>
+							<h2 class="article-title"><a href="#">{{articles[9].title}}</a></h2>
+							<ul class="article-meta">
+								<li><i class="fa fa-clock-o"></i> January 31, 2017</li>
+								<li><i class="fa fa-comments"></i> 33</li>
+							</ul>
+						</div>
+					</article>
+				</a>
+				<!-- </div>
+          
+              <div class="item"> -->
+				<a href={{articles[10].url}} target="_blank">
+					<article class="article thumb-article  slide1">
+						<div class="article-img">
+							<img src="{{articles[10].urlToImage}}" alt="">
+						</div>
+						<div class="article-body">
+							<ul class="article-info">
+								<li class="article-category"><a href="#">News</a></li>
+								<li class="article-type"><i class="fa fa-camera"></i></li>
+							</ul>
+							<h2 class="article-title"><a href="#">{{articles[10].title}}</a></h2>
+							<ul class="article-meta">
+								<li><i class="fa fa-clock-o"></i> January 31, 2017</li>
+								<li><i class="fa fa-comments"></i> 33</li>
+							</ul>
+						</div>
+					</article>
+				</a>
+			</div>
+
+
+		</div>
+		<a class="left carousel-control" href="#myCarousel1" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel1" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
 
 
 
 
 
 
-		   <!-- <div id="owl-carousel-1" class="owl-carousel owl-theme center-owl-nav"> -->
-			<!-- ARTICLE -->
-			<!-- <div class="owl-item">
+
+
+
+	<!-- <div id="owl-carousel-1" class="owl-carousel owl-theme center-owl-nav"> -->
+	<!-- ARTICLE -->
+	<!-- <div class="owl-item">
 			<article class="article thumb-article">
 				<div class="article-img">
 					<img src="../../assets/img/img-lg-1.jpg" alt="">
@@ -178,235 +191,154 @@
 					</ul>
 				</div>
 			</article> -->
-			<!-- /ARTICLE -->
-			
-			<!-- ARTICLE -->
-			<!-- <article class="article thumb-article">
-				<div class="article-img">
-					<img src="../../assets/img/img-lg-2.jpg" alt="">
-				</div>
-				<div class="article-body">
-					<ul class="article-info">
-						<li class="article-category"><a href="#">News</a></li>
-						<li class="article-type"><i class="fa fa-file-text"></i></li>
-					</ul>
-					<h2 class="article-title"><a href="#">Duis urbanitas eam in, tempor consequat.</a></h2>
-					<ul class="article-meta">
-						<li><i class="fa fa-clock-o"></i> January 31, 2017</li>
-						<li><i class="fa fa-comments"></i> 33</li>
-					</ul>
-				</div>
-			</article> -->
-			<!-- /ARTICLE -->
-			
-			<!-- ARTICLE -->
-			<!-- <article class="article thumb-article">
-				<div class="article-img">
-					<img src="../../assets/img/img-lg-2.jpg" alt="">
-				</div>
-				<div class="article-body">
-					<ul class="article-info">
-						<li class="article-category"><a href="#">News</a></li>
-						<li class="article-type"><i class="fa fa-file-text"></i></li>
-					</ul>
-					<h2 class="article-title"><a href="#">Duis urbanitas eam in, tempor consequat.</a></h2>
-					<ul class="article-meta">
-						<li><i class="fa fa-clock-o"></i> January 31, 2017</li>
-						<li><i class="fa fa-comments"></i> 33</li>
-					</ul>
-				</div>
-			</article> -->
-			<!-- /ARTICLE -->
-		<!-- </div>
-	</div> -->
-            <!-- Left and right controls -->
-           
-		<!--Owl Carousel 1 -->
-		
-		<!-- SECTION -->
-		<div class="section">
-			<!-- CONTAINER -->
-			<div class="container">
-				<!-- ROW -->
-				<div class="row">
-					<!-- Main Column -->
-					<div class="col-md-12">
-						<!-- section title -->
-						<div class="section-title">
-							<h2 class="title">Trending Posts</h2>
-							<!-- tab nav -->
-							<ul class="tab-nav pull-right">
-								<li class="active"><a data-toggle="tab" href="#tab1">All</a></li>
-								<li><a data-toggle="tab" href="#tab1">Business</a></li>
-								<li><a data-toggle="tab" href="#tab1">Entertainment</a></li>
-								<li><a data-toggle="tab" href="#tab1">General</a></li>
-								<li><a data-toggle="tab" href="#tab1">Health</a></li>
-								<li><a data-toggle="tab" href="#tab1">Science</a></li>
-								<li><a data-toggle="tab" href="#tab1">Sports</a></li>
-								<li><a data-toggle="tab" href="#tab1">technology</a></li>
-							</ul>
-							<!-- /tab nav -->
-						</div>
-						<!-- /section title -->
-						
-						<!-- Tab content -->
-						<div class="tab-content">
-							<!-- tab1 -->
-							<div id="tab1" class="tab-pane fade in active">
-								<!-- row -->
-								<div class="row">
-									<!-- Column 1 -->
-									<div class="col-md-3 col-sm-6" *ngFor="let item of trending_post">
-										<!-- ARTICLE -->
-										<article class="article">
-											<div class="article-img">
-												<a href="#">
-													<img src="{{item.urlToImage}}" alt="">
-												</a>
-												<ul class="article-info">
-													<li class="article-type"><i class="fa fa-camera"></i></li>
-												</ul>
-											</div>
-											<div class="article-body">
-												<h4 class="article-title">{{item.title}}</h4>
-												<ul class="article-meta">
-													<li><i class="fa fa-clock-o"></i> {{item.publishedAt}}</li>
-													<li><i class="fa fa-comments"></i> 33</li>
-												</ul>
-											</div>
-										</article>
-										<!-- /ARTICLE -->
-									</div>
-									<!-- /Column 1 -->
-									
-									<!-- Column 2 -->
-									
-								</div>
-								<!-- /row -->
-								
-								<!-- row -->
-								<div class="row">
-									
-									<!-- /Column 3 -->
-								</div>
-								<!-- /row -->
-							</div>
-							<!-- /tab1 -->
-						</div>
-						<!-- /tab content -->
-					</div>
-					<!-- /Main Column -->
-				</div>
-				<!-- /ROW -->
-			</div>
-			<!-- /CONTAINER -->
-		</div>
-		<!-- /SECTION -->
-		
-		<!-- SECTION -->
-		<div class="section">
-			<!-- CONTAINER -->
-			<div class="container">
-				<!-- ROW -->
-				<div class="row">
-					<!-- Main Column -->
-					<div class="col-md-12">
-						<!-- row -->
-						<div class="row" >
-							<!-- Column 1 -->
-							<div class="col-md-4 col-sm-4" *ngFor="let item of articles">
-								<!-- section title -->
-								<!-- bussiness title <div class="section-title"> -->
-									<!-- <h2 class="title">Business</h2> -->
-									<!-- <button style="height: 50px;width: 130px;font-weight: 700;font-family: Georgia, 'Times New Roman', Times, serif;" class="title" [routerLink]="['/business']">Business</button> -->
+	<!-- /ARTICLE -->
 
-								<!-- </div> -->
-								<!-- /section title -->
-								
-								<!-- ARTICLE -->
-								<!-- <p>{{item}}</p> -->
-								<article class="article" style="height: 25em;">
-									<div class="article-img">
-										<a  href={{item.url}}  target="_blank">
-											<img src={{item.urlToImage}} style="height: 15em;" alt="Image Loading...">
-										</a>
-										<ul class="article-info">
-											<li class="article-type"><i class="fa fa-camera"></i></li>
-										</ul>
-									</div>
-									<div class="article-body">
-										<h3 class="article-title" id="title_id"><a href={{item.url}}  target="_blank">{{item.title}}</a></h3>
-										<ul class="article-meta">
-											<li><i class="fa fa-clock-o"></i> {{item.publishedAt}}</li>
-											<li><i class="fa fa-comments"></i> 33</li>
-										</ul>
-										<p>{{item.description}}</p>
-									</div>
-								</article>
-								<!-- /ARTICLE -->
-								
-								<!-- ARTICLE -->
-							
-								<!-- /ARTICLE -->
-								
-								<!-- ARTICLE -->
-							
-								<!-- /ARTICLE -->
-							</div>
-							<!-- /Column 1 -->
-							
-							<!-- Column 2 -->
-						
-							<!-- /Column 2 -->
-<!--                            column 3-->
-                        
-<!--                            column 3 end-->
-						</div>
-						<!-- /row -->
-						
-						<!-- row -->
-												<!-- /row -->
-						
-						<!-- row -->
-						
-						<!-- /row -->
-					</div>
-					<!-- /Main Column -->
-					
-					<!-- Aside Column -->
-					
-					<!-- /Aside Column -->
+	<!-- ARTICLE -->
+	<!-- <article class="article thumb-article">
+				<div class="article-img">
+					<img src="../../assets/img/img-lg-2.jpg" alt="">
 				</div>
-				<!-- /ROW -->
+				<div class="article-body">
+					<ul class="article-info">
+						<li class="article-category"><a href="#">News</a></li>
+						<li class="article-type"><i class="fa fa-file-text"></i></li>
+					</ul>
+					<h2 class="article-title"><a href="#">Duis urbanitas eam in, tempor consequat.</a></h2>
+					<ul class="article-meta">
+						<li><i class="fa fa-clock-o"></i> January 31, 2017</li>
+						<li><i class="fa fa-comments"></i> 33</li>
+					</ul>
+				</div>
+			</article> -->
+	<!-- /ARTICLE -->
+
+	<!-- ARTICLE -->
+	<!-- <article class="article thumb-article">
+				<div class="article-img">
+					<img src="../../assets/img/img-lg-2.jpg" alt="">
+				</div>
+				<div class="article-body">
+					<ul class="article-info">
+						<li class="article-category"><a href="#">News</a></li>
+						<li class="article-type"><i class="fa fa-file-text"></i></li>
+					</ul>
+					<h2 class="article-title"><a href="#">Duis urbanitas eam in, tempor consequat.</a></h2>
+					<ul class="article-meta">
+						<li><i class="fa fa-clock-o"></i> January 31, 2017</li>
+						<li><i class="fa fa-comments"></i> 33</li>
+					</ul>
+				</div>
+			</article> -->
+	<!-- /ARTICLE -->
+	<!-- </div>
+	</div> -->
+	<!-- Left and right controls -->
+
+
+
+	<!-- SECTION -->
+	<div class="section">
+		<!-- CONTAINER -->
+		<div class="container">
+			<!-- ROW -->
+			<div class="row">
+				<!-- Main Column -->
+				<div class="col-md-12">
+					<!-- row -->
+					<div class="row">
+						<!-- Column 1 -->
+						<div class="col-md-4 col-sm-4" *ngFor="let item of articles">
+							<!-- section title -->
+							<!-- bussiness title <div class="section-title"> -->
+							<!-- <h2 class="title">Business</h2> -->
+							<!-- <button style="height: 50px;width: 130px;font-weight: 700;font-family: Georgia, 'Times New Roman', Times, serif;" class="title" [routerLink]="['/business']">Business</button> -->
+
+							<!-- </div> -->
+							<!-- /section title -->
+
+							<!-- ARTICLE -->
+							<!-- <p>{{item}}</p> -->
+							<article class="article" style="height: 25em;">
+								<div class="article-img">
+									<a href={{item.url}} target="_blank">
+										<img src={{item.urlToImage}} style="height: 15em;" alt="Image Loading...">
+									</a>
+									<ul class="article-info">
+										<li class="article-type"><i class="fa fa-camera"></i></li>
+									</ul>
+								</div>
+								<div class="article-body">
+									<h3 class="article-title" id="title_id"><a href={{item.url}}
+											target="_blank">{{item.title}}</a></h3>
+									<ul class="article-meta">
+										<li><i class="fa fa-clock-o"></i> {{item.publishedAt}}</li>
+										<li><i class="fa fa-comments"></i> 33</li>
+									</ul>
+									<p>{{item.description}}</p>
+								</div>
+							</article>
+							<!-- /ARTICLE -->
+
+							<!-- ARTICLE -->
+
+							<!-- /ARTICLE -->
+
+							<!-- ARTICLE -->
+
+							<!-- /ARTICLE -->
+						</div>
+						<!-- /Column 1 -->
+
+						<!-- Column 2 -->
+
+						<!-- /Column 2 -->
+						<!--                            column 3-->
+
+						<!--                            column 3 end-->
+					</div>
+					<!-- /row -->
+
+					<!-- row -->
+					<!-- /row -->
+
+					<!-- row -->
+
+					<!-- /row -->
+				</div>
+				<!-- /Main Column -->
+
+				<!-- Aside Column -->
+
+				<!-- /Aside Column -->
 			</div>
-			<!-- /CONTAINER -->
+			<!-- /ROW -->
 		</div>
-		<!-- /SECTION -->
-		
-		<!-- AD SECTION -->
-<!--
+		<!-- /CONTAINER -->
+	</div>
+	<!-- /SECTION -->
+
+	<!-- AD SECTION -->
+	<!--
 		<div class="visible-lg visible-md">
 			<img class="center-block" src="./img/ad-3.jpg" alt="">
 		</div>
 -->
-		<!-- /AD SECTION -->
-		
-		<!-- SECTION -->
-<!--		poopular videos-->
-		<!-- /SECTION -->
-		
-		<!-- SECTION -->
-		
-		<!-- /SECTION -->
-		
-		<!-- FOOTER -->
-		
-		
-		<!-- jQuery Plugins -->
-		
-	</body>
-	
-	
+	<!-- /AD SECTION -->
+
+	<!-- SECTION -->
+	<!--		poopular videos-->
+	<!-- /SECTION -->
+
+	<!-- SECTION -->
+
+	<!-- /SECTION -->
+
+	<!-- FOOTER -->
+
+
+	<!-- jQuery Plugins -->
+
+</body>
+
+
 </html>
-
-
