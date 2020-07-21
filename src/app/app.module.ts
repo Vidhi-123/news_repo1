@@ -5,7 +5,7 @@ import { AngularFireModule } from "angularfire2";
 export const firebaseConfig = environment.firebaseConfig;
 
 import { AgmCoreModule } from '@agm/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './component/home/home.component';
@@ -26,6 +26,9 @@ import { TechnologyComponent } from './component/technology/technology.component
 import { WeatherComponent } from './component/weather/weather.component';
 
 import {MatCardModule} from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule} from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
 import { environment } from 'src/environments/environment';
 import { GoogleMapComponent } from './component/google-map/google-map.component';
@@ -36,6 +39,18 @@ import { SourcePageDetailComponent } from './component/source-page-detail/source
 import { DesignForNewsComponent } from './component/design-for-news/design-for-news.component';
 import { CountryComponent } from './component/country/country.component';
 import { CountrycatComponent } from './component/countrycat/countrycat.component';
+import { LoginComponent } from './component/login/login.component';
+import { SignupComponent } from './component/signup/signup.component';
+import { SocialLoginModule,SocialAuthServiceConfig      } from 'angularx-social-login';
+import {
+  GoogleLoginProvider,
+} from 'angularx-social-login';
+
+
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -59,22 +74,47 @@ import { CountrycatComponent } from './component/countrycat/countrycat.component
     SourcePageDetailComponent,
     DesignForNewsComponent,
     CountryComponent,
-    CountrycatComponent
+    CountrycatComponent,
+    LoginComponent,
+    SignupComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
-    
+    MatToolbarModule,
     MatCardModule,
+    SocialLoginModule,
+  
+    MatIconModule,
     MatButtonModule,
+    MatFormFieldModule,
+   
     AngularFireModule.initializeApp(firebaseConfig),
     AgmCoreModule.forRoot({
       apiKey:environment.googleMapsApi
     })
 
   ],
-  providers: [NewsService,WeatherService,CountryService],
+  providers: [NewsService,WeatherService,CountryService,
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '68797875695-o0ph3cfco8kju9e52clpnnpkr4rsfjvq.apps.googleusercontent.com'
+            ),
+          },
+        ],
+      } as SocialAuthServiceConfig,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

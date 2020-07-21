@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NewsService } from 'src/app/service/news.service';
+import { IntrestService } from 'src/app/service/intrest.service';
 @Component({
   selector: 'app-design',
   templateUrl: './design.component.html',
@@ -24,395 +25,393 @@ export class DesignComponent implements OnInit {
   investing:Array<any>=[];
   stock:Array<any>=[];
   movies:Array<any>=[];
-  constructor(private act_router:ActivatedRoute,private newsService:NewsService) { }
+  constructor(private _ser:IntrestService,private act_router:ActivatedRoute,private newsService:NewsService) { }
 
   ngOnInit() {
-    this.item1 = this.act_router.snapshot.params["name"];
+    // this.item1 = this.act_router.snapshot.params["name"];
+    let user_id=Number(localStorage.getItem('user_id'));
     //console.log(this.item1);
-    this.newsService.getArticleByYoga().subscribe((data:any) =>{ 
-      //console.log(data);
 
-      for(let i=0;i<data.articles.length;i++)
+    this._ser.getIntrestByUserId(user_id).subscribe(
+      (data:any[])=>
       {
-        if(data.articles[i].description!=null)
+        for(let i=0;i<data.length;i++)
         {
+          if(data[i].category_name=="covid")
+          {
+            this.newsService.getArticleByCovid().subscribe((data:any) =>{ 
+              //console.log(data);
         
-        if(data.articles[i].description.length>=150)
-        {
-          data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
-          console.log(data.articles[i].description);
-          this.yoga.push(data.articles[i]);
-        }
-      
-        else
-        this.yoga.push(data.articles[i]);
-      }
-
-    }
-    });
-    
-    this.newsService.getArticleByLifeStyle().subscribe((data:any) =>{ 
-      //console.log(data);
-
-      for(let i=0;i<data.articles.length;i++)
-      {
-        if(data.articles[i].description!=null)
-        {
+              for(let i=0;i<data.articles.length;i++)
+              {
+                if(data.articles[i].description!=null)
+                {
+                
+                if(data.articles[i].description.length>=150)
+                {
+                  data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
+                  console.log(data.articles[i].description);
+                  this.news.push(data.articles[i]);
+                }
+              
+                else
+                this.news.push(data.articles[i]);
+              }
         
-        if(data.articles[i].description.length>=150)
-        {
-          data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
-          console.log(data.articles[i].description);
-          this.lifestyle.push(data.articles[i]);
-        }
-      
-        else
-        this.lifestyle.push(data.articles[i]);
-      }
-
-    }
-    });
-    this.newsService.getArticleByPolitics().subscribe((data:any) =>{ 
-      //console.log(data);
-
-      for(let i=0;i<data.articles.length;i++)
-      {
-        if(data.articles[i].description!=null)
-        {
+            }
+            });
+          }
+          else if(data[i].category_name="yoga")
+          {
+            this.newsService.getArticleByYoga().subscribe((data:any) =>{ 
+              //console.log(data);
         
-        if(data.articles[i].description.length>=150)
-        {
-          data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
-          console.log(data.articles[i].description);
-          this.politics.push(data.articles[i]);
-        }
-      
-        else
-        this.politics.push(data.articles[i]);
-      }
-
-    }
-    });
-    this.newsService.getArticleByFood().subscribe((data:any) =>{ 
-      //console.log(data);
-
-      for(let i=0;i<data.articles.length;i++)
-      {
-        if(data.articles[i].description!=null)
-        {
+              for(let i=0;i<data.articles.length;i++)
+              {
+                if(data.articles[i].description!=null)
+                {
+                
+                if(data.articles[i].description.length>=150)
+                {
+                  data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
+                  console.log(data.articles[i].description);
+                  this.news.push(data.articles[i]);
+                }
+              
+                else
+                this.news.push(data.articles[i]);
+              }
         
-        if(data.articles[i].description.length>=150)
-        {
-          data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
-          console.log(data.articles[i].description);
-          this.food.push(data.articles[i]);
-        }
-      
-        else
-        this.food.push(data.articles[i]);
-      }
-
-    }
-    });
-    this.newsService.getArticleByStock().subscribe((data:any) =>{ 
-      //console.log(data);
-
-      for(let i=0;i<data.articles.length;i++)
-      {
-        if(data.articles[i].description!=null)
-        {
+            }
+            });
+          }
+          else if(data[i].category_name=="lifestyle")
+          {
+            this.newsService.getArticleByLifeStyle().subscribe((data:any) =>{ 
+              //console.log(data);
         
-        if(data.articles[i].description.length>=150)
-        {
-          data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
-          console.log(data.articles[i].description);
-          this.stock.push(data.articles[i]);
-        }
-      
-        else
-        this.stock.push(data.articles[i]);
-      }
-
-    }
-    });
-    this.newsService.getArticleByMovies().subscribe((data:any) =>{ 
-      //console.log(data);
-
-      for(let i=0;i<data.articles.length;i++)
-      {
-        if(data.articles[i].description!=null)
-        {
+              for(let i=0;i<data.articles.length;i++)
+              {
+                if(data.articles[i].description!=null)
+                {
+                
+                if(data.articles[i].description.length>=150)
+                {
+                  data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
+                  console.log(data.articles[i].description);
+                  this.news.push(data.articles[i]);
+                }
+              
+                else
+                this.news.push(data.articles[i]);
+              }
         
-        if(data.articles[i].description.length>=150)
-        {
-          data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
-          console.log(data.articles[i].description);
-          this.movies.push(data.articles[i]);
-        }
-      
-        else
-        this.movies.push(data.articles[i]);
-      }
-
-    }
-    });
-    this.newsService.getArticleByFashion().subscribe((data:any) =>{ 
-      //console.log(data);
-
-      for(let i=0;i<data.articles.length;i++)
-      {
-        if(data.articles[i].description!=null)
-        {
+            }
+            });
+          }
+          else if(data[i].category_name=="politics")
+          {
+            this.newsService.getArticleByPolitics().subscribe((data:any) =>{ 
+              //console.log(data);
         
-        if(data.articles[i].description.length>=150)
-        {
-          data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
-          console.log(data.articles[i].description);
-          this.fashion.push(data.articles[i]);
-        }
-      
-        else
-        this.fashion.push(data.articles[i]);
-      }
-
-    }
-    });
-    this.newsService.getArticleByInvesting().subscribe((data:any) =>{ 
-      //console.log(data);
-
-      for(let i=0;i<data.articles.length;i++)
-      {
-        if(data.articles[i].description!=null)
-        {
+              for(let i=0;i<data.articles.length;i++)
+              {
+                if(data.articles[i].description!=null)
+                {
+                
+                if(data.articles[i].description.length>=150)
+                {
+                  data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
+                  console.log(data.articles[i].description);
+                  this.news.push(data.articles[i]);
+                }
+              
+                else
+                this.news.push(data.articles[i]);
+              }
         
-        if(data.articles[i].description.length>=150)
-        {
-          data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
-          console.log(data.articles[i].description);
-          this.investing.push(data.articles[i]);
-        }
-      
-        else
-        this.investing.push(data.articles[i]);
-      }
+            }
+            });
+          }
+          else if(data[i].category_name=="food")
+          {
 
-    }
-    });
-    this.newsService.getArticleByTravel().subscribe((data:any) =>{ 
-      //console.log(data);
-
-      for(let i=0;i<data.articles.length;i++)
-      {
-        if(data.articles[i].description!=null)
-        {
+            this.newsService.getArticleByFood().subscribe((data:any) =>{ 
+              //console.log(data);
         
-        if(data.articles[i].description.length>=150)
-        {
-          data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
-          console.log(data.articles[i].description);
-          this.travel.push(data.articles[i]);
-        }
-      
-        else
-        this.travel.push(data.articles[i]);
-      }
-
-    }
-    });
-     this.newsService.getArticleByFinance().subscribe((data:any) =>{ 
-      //console.log(data);
-
-      for(let i=0;i<data.articles.length;i++)
-      {
-        if(data.articles[i].description!=null)
-        {
+              for(let i=0;i<data.articles.length;i++)
+              {
+                if(data.articles[i].description!=null)
+                {
+                
+                if(data.articles[i].description.length>=150)
+                {
+                  data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
+                  console.log(data.articles[i].description);
+                  this.food.push(data.articles[i]);
+                }
+              
+                else
+                this.food.push(data.articles[i]);
+              }
         
-        if(data.articles[i].description.length>=150)
-        {
-          data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
-          console.log(data.articles[i].description);
-          this.finance.push(data.articles[i]);
-        }
-      
-        else
-        this.finance.push(data.articles[i]);
-      }
-
-    }
-    });
-    this.newsService.getArticleByStartups().subscribe((data:any) =>{ 
-      //console.log(data);
-
-      for(let i=0;i<data.articles.length;i++)
-      {
-        if(data.articles[i].description!=null)
-        {
+            }
+            });
+          }
+          else if(data[i].category_name=="stock market")
+          {
+            this.newsService.getArticleByStock().subscribe((data:any) =>{ 
+              //console.log(data);
         
-        if(data.articles[i].description.length>=150)
-        {
-          data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
-          console.log(data.articles[i].description);
-          this.startups.push(data.articles[i]);
-        }
-      
-        else
-        this.startups.push(data.articles[i]);
-      }
-
-    }
-    });
-    this.newsService.getArticleByScience().subscribe((data:any) =>{ 
-      //console.log(data);
-
-      for(let i=0;i<data.articles.length;i++)
-      {
-        if(data.articles[i].description!=null)
-        {
+              for(let i=0;i<data.articles.length;i++)
+              {
+                if(data.articles[i].description!=null)
+                {
+                
+                if(data.articles[i].description.length>=150)
+                {
+                  data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
+                  console.log(data.articles[i].description);
+                  this.news.push(data.articles[i]);
+                }
+              
+                else
+                this.news.push(data.articles[i]);
+              }
         
-        if(data.articles[i].description.length>=150)
-        {
-          data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
-          console.log(data.articles[i].description);
-          this.science.push(data.articles[i]);
-        }
-      
-        else
-        this.science.push(data.articles[i]);
-      }
-
-    }
-    });
-     this.newsService.getArticleByCovid().subscribe((data:any) =>{ 
-      //console.log(data);
-
-      for(let i=0;i<data.articles.length;i++)
-      {
-        if(data.articles[i].description!=null)
-        {
+            }
+            });
+          }
+          else if(data[i].category_name=="movies")
+          {
+  
+            this.newsService.getArticleByMovies().subscribe((data:any) =>{ 
+              //console.log(data);
         
-        if(data.articles[i].description.length>=150)
-        {
-          data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
-          console.log(data.articles[i].description);
-          this.covid.push(data.articles[i]);
-        }
-      
-        else
-        this.covid.push(data.articles[i]);
-      }
-
-    }
-    });
-    this.newsService.getArticleByTrump().subscribe((data:any) =>{ 
-      //console.log(data);
-
-      for(let i=0;i<data.articles.length;i++)
-      {
-        if(data.articles[i].description!=null)
-        {
+              for(let i=0;i<data.articles.length;i++)
+              {
+                if(data.articles[i].description!=null)
+                {
+                
+                if(data.articles[i].description.length>=150)
+                {
+                  data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
+                  console.log(data.articles[i].description);
+                  this.news.push(data.articles[i]);
+                }
+              
+                else
+                this.news.push(data.articles[i]);
+              }
         
-        if(data.articles[i].description.length>=150)
-        {
-          data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
-          console.log(data.articles[i].description);
-          this.donaldTrump.push(data.articles[i]);
-        }
-      
-        else
-        this.donaldTrump.push(data.articles[i]);
-      }
+            }
+            });
+          
+          }
+          else if(data[i].category_name=="fashion")
+          {
 
-    }
-    });
-    this.newsService.getArticleByPsychology().subscribe((data:any) =>{ 
-      //console.log(data);
-
-      for(let i=0;i<data.articles.length;i++)
-      {
-        if(data.articles[i].description!=null)
-        {
+            this.newsService.getArticleByFashion().subscribe((data:any) =>{ 
+              //console.log(data);
         
-        if(data.articles[i].description.length>=150)
-        {
-          data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
-          console.log(data.articles[i].description);
-          this.Psychology.push(data.articles[i]);
+              for(let i=0;i<data.articles.length;i++)
+              {
+                if(data.articles[i].description!=null)
+                {
+                
+                if(data.articles[i].description.length>=150)
+                {
+                  data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
+                  console.log(data.articles[i].description);
+                  this.news.push(data.articles[i]);
+                }
+              
+                else
+                this.news.push(data.articles[i]);
+              }
+        
+            }
+            });
+          }
+          else if(data[i].category_name=="investment")
+          {
+ 
+            this.newsService.getArticleByInvesting().subscribe((data:any) =>{ 
+              //console.log(data);
+        
+              for(let i=0;i<data.articles.length;i++)
+              {
+                if(data.articles[i].description!=null)
+                {
+                
+                if(data.articles[i].description.length>=150)
+                {
+                  data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
+                  console.log(data.articles[i].description);
+                  this.news.push(data.articles[i]);
+                }
+              
+                else
+                this.news.push(data.articles[i]);
+              }
+        
+            }
+            });
+          }
+          else if(data[i].category_name=="travel")
+          {
+            this.newsService.getArticleByTravel().subscribe((data:any) =>{ 
+              //console.log(data);
+        
+              for(let i=0;i<data.articles.length;i++)
+              {
+                if(data.articles[i].description!=null)
+                {
+                
+                if(data.articles[i].description.length>=150)
+                {
+                  data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
+                  console.log(data.articles[i].description);
+                  this.news.push(data.articles[i]);
+                }
+              
+                else
+                this.news.push(data.articles[i]);
+              }
+        
+            }
+            });
+          }
+          else if(data[i].category_name=="finance")
+          {
+ 
+            this.newsService.getArticleByFinance().subscribe((data:any) =>{ 
+              //console.log(data);
+        
+              for(let i=0;i<data.articles.length;i++)
+              {
+                if(data.articles[i].description!=null)
+                {
+                
+                if(data.articles[i].description.length>=150)
+                {
+                  data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
+                  console.log(data.articles[i].description);
+                  this.news.push(data.articles[i]);
+                }
+              
+                else
+                this.news.push(data.articles[i]);
+              }
+        
+            }
+            });
+          }
+          else if(data[i].category_name=="startup")
+          {
+
+  
+            this.newsService.getArticleByStartups().subscribe((data:any) =>{ 
+              //console.log(data);
+        
+              for(let i=0;i<data.articles.length;i++)
+              {
+                if(data.articles[i].description!=null)
+                {
+                
+                if(data.articles[i].description.length>=150)
+                {
+                  data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
+                  console.log(data.articles[i].description);
+                  this.news.push(data.articles[i]);
+                }
+              
+                else
+                this.news.push(data.articles[i]);
+              }
+        
+            }
+            });
+          }
+          else if(data[i].category_name=="science")
+          {
+
+            this.newsService.getArticleByScience().subscribe((data:any) =>{ 
+              //console.log(data);
+        
+              for(let i=0;i<data.articles.length;i++)
+              {
+                if(data.articles[i].description!=null)
+                {
+                
+                if(data.articles[i].description.length>=150)
+                {
+                  data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
+                  console.log(data.articles[i].description);
+                  this.news.push(data.articles[i]);
+                }
+              
+                else
+                this.news.push(data.articles[i]);
+              }
+        
+            }
+            });
+           
+          }
+          else if(data[i].category_name=="donald trump")
+          {
+            this.newsService.getArticleByTrump().subscribe((data:any) =>{ 
+              //console.log(data);
+        
+              for(let i=0;i<data.articles.length;i++)
+              {
+                if(data.articles[i].description!=null)
+                {
+                
+                if(data.articles[i].description.length>=150)
+                {
+                  data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
+                  console.log(data.articles[i].description);
+                  this.donaldTrump.push(data.articles[i]);
+                }
+              
+                else
+                this.donaldTrump.push(data.articles[i]);
+              }
+        
+            }
+            });
+          }
+          else if(data[i].category_name=="psychology")
+          {
+
+            this.newsService.getArticleByPsychology().subscribe((data:any) =>{ 
+              //console.log(data);
+        
+              for(let i=0;i<data.articles.length;i++)
+              {
+                if(data.articles[i].description!=null)
+                {
+                
+                if(data.articles[i].description.length>=150)
+                {
+                  data.articles[i].description=data.articles[i].description.substr(0,150) + '...';
+                  console.log(data.articles[i].description);
+                  this.Psychology.push(data.articles[i]);
+                }
+              
+                else
+                this.Psychology.push(data.articles[i]);
+              }
+        
+            }
+            });
+        
+          }
         }
-      
-        else
-        this.Psychology.push(data.articles[i]);
       }
-
-    }
-    });
-    if(this.item1=='yoga')
-    {
-      this.news=this.yoga;
-    }
-    else if(this.item1=='covid')
-    {
-      this.news=this.covid;
-    }
-    else if(this.item1=='Trump')
-    {
-      this.news=this.donaldTrump;
-    }
-    else if(this.item1=='lifestyle')
-    {
-      this.news=this.lifestyle;
-    }
-    else if(this.item1=='startups')
-    {
-      this.news=this.startups;
-    }
-    else if(this.item1=='startups')
-    {
-      this.news=this.startups;
-    }
-    else if(this.item1=='Psychology')
-    {
-      this.news=this.Psychology;
-    }
-    else if(this.item1=='science')
-    {
-      this.news=this.science;
-    }
-    else if(this.item1=='politics')
-    {
-      this.news=this.politics;
-    }
-    else if(this.item1=='finance')
-    {
-      this.news=this.finance;
-    }
-    else if(this.item1=='food')
-    {
-      this.news=this.food;
-    }
-    else if(this.item1=='travel')
-    {
-      this.news=this.travel;
-    }
-    else if(this.item1=='fashion')
-    {
-      this.news=this.fashion;
-    }
-    else if(this.item1=='investing')
-    {
-      this.news=this.investing;
-    }
-    else if(this.item1=='stock')
-    {
-      this.news=this.stock;
-    }
-    else if(this.item1=='movies')
-    {
-      this.news=this.movies;
-    }
-    
-
-    
-
+    );
     
   }
  

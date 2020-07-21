@@ -7,8 +7,10 @@ export const environment = {
   firebaseConfig:{
 
   },
-  googleMapsApi:'AIzaSyArzm1jxOgSFuiZp6x6oE5Sq5Q5rvFl6b4'
+  googleMapsApi:'AIzaSyArzm1jxOgSFuiZp6x6oE5Sq5Q5rvFl6b4',
+  header_flag:false  
 };
+
 
 
 /*

@@ -21,12 +21,20 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-*{
+.corner {
+  
+  
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+/* *{
   margin: 0;
   top: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
 /* body{
   display: flex;
   justify-content: right;

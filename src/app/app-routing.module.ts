@@ -18,7 +18,10 @@ import { SourcePageDetailComponent } from './component/source-page-detail/source
 import { DesignForNewsComponent } from './component/design-for-news/design-for-news.component';
 import { CountryComponent } from './component/country/country.component';
 import {CountrycatComponent } from './component/countrycat/countrycat.component';
+import { LoginComponent } from './component/login/login.component';
+import { SignupComponent } from './component/signup/signup.component';
 const routes: Routes = [
+  {path:'login',component:LoginComponent},
   {path: '', component: HomeComponent},
   {path: 'post/:itemName' , component: PostComponent},
   {path: 'business' , component: BusinessComponent},
@@ -30,13 +33,14 @@ const routes: Routes = [
   {path: 'technology' , component: TechnologyComponent},
   {path:'weather',component:WeatherComponent},
   {path:'map',component:GoogleMapComponent},
-  {path:'design/:name',component:DesignComponent},
+  {path:'design',component:DesignComponent},
   {path:'interest',component:InterestComponent},
   {path:'addsource',component:AddSourcePageComponent},
   {path:'sourcedetail/:name',component:SourcePageDetailComponent},
   {path:'newsdesign',component:DesignForNewsComponent},
   {path:'country/:name',component:CountryComponent},
   {path:'countrycat',component:CountrycatComponent},
+  {path:'signup',component:SignupComponent}
 ];
 
 @NgModule({

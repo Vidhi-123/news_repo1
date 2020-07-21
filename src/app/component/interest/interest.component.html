@@ -5,180 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
+   
     <div class="container-fluid">
+
         <div class="container1">
-            <div class="row">
-                <div class="col-md-4">
-                    <a routerLink="/design/yoga" href="">
+            <div class="row" >
+                
+                <div class="col-md-4" *ngFor="let item of intrests;let i=index">
+                    <!-- <a routerLink="/design/{{item.cat_img}}" href=""> -->
                         <div class="box">
                             <div class="imgBx">
-                                <img src="../../../assets/img/yoga.jpg" height="300px" width="350px">
-                                <div class="centered">Yoga</div>
+                                <img src="http://localhost:3000/images/{{item.cat_img}}.jpg" height="300px" width="350px">
+                                
+                                <div class="centered">{{item.category_name}}</div>
+                                
+                                    <button (click)="clickIn(item,i)"  class="corner" mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+                                        <mat-icon>{{(Count_arr[i]%2) ? 'done' : 'add'}}</mat-icon>
+                                       
+                                      </button>
+                                   
+                                
                             </div>
                         </div>
-                    </a>
+                    <!-- </a> -->
 
                 </div>
 
-                <div class="col-md-4">
-                    <a routerLink="/design/covid" href="">
-                        <div class="box">
-                            <div class="imgBx">
-                                <img src="../../../assets/img/covid19.jpg" height="300px" width="350px">
-                                <div class="centered">COVID-19</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a routerLink="/design/Trump" href="">
-                        <div class="box">
-                            <div class="imgBx">
-                                <img src="../../../assets/img/trump.jpg" height="300px" width="350px">
-                                <div class="centered">Donald Trump</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                 
+            
             </div>
-            <br><br><br>
-            <div class="row">
-                <div class="col-md-4">
-                    <a routerLink="/design/lifestyle" href="">
-                        <div class="box">
-                            <div class="imgBx">
-                                <img src="../../../assets/img/lifestyle.jpg" height="300px" width="350px">
-                                <div class="centered">Lifestyle</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a routerLink="/design/startups" href="">
-                        <div class="box">
-                            <div class="imgBx">
-                                <img src="../../../assets/img/startup.jpg" height="300px" width="350px">
-                                <div class="centered">Startups</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a routerLink="/design/Psychology" href="">
-                        <div class="box">
-                            <div class="imgBx">
-                                <img src="../../../assets/img/pyscology.jpg" height="300px" width="350px">
-                                <div class="centered">Psychology</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <br><br><br>
-            <div class="row">
-                <div class="col-md-4">
-                    <a routerLink="/design/science" href="">
-                        <div class="box">
-                            <div class="imgBx">
-                                <img src="../../../assets/img/science.jpg" height="300px" width="350px">
-                                <div class="centered">Science</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a routerLink="/design/politics" href="">
-                        <div class="box">
-                            <div class="imgBx">
-                                <img src="../../../assets/img/politics.jpg" height="300px" width="350px">
-                                <div class="centered">Politics</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a routerLink="/design/finance" href="">
-                        <div class="box">
-                            <div class="imgBx">
-                                <img src="../../../assets/img/finance.jpg" height="300px" width="350px">
-                                <div class="centered">Finance</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <br><br><br>
-            <div class="row">
-                <div class="col-md-4">
-                    <a routerLink="/design/food" href="">
-                        <div class="box">
-                            <div class="imgBx">
-                                <img src="../../../assets/img/food.jpg" height="300px" width="350px">
-                                <div class="centered">Food</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a routerLink="/design/travel" href="">
-                        <div class="box">
-                            <div class="imgBx">
-                                <img src="../../../assets/img/travel.jpg" height="300px" width="350px">
-                                <div class="centered">Travel</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class='col-md-4'>
-                    <a routerLink="/design/fashion" href="">
-                        <div class="box">
-                            <div class="imgBx">
-                                <img src="../../../assets/img/fashion.jpg" height="300px" width="350px">
-                                <div class="centered">Fashion</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <br><br><br>
-            <div class="row">
-                <div class="col-md-4">
-                    <a routerLink="/design/investing" href="">
-                        <div class="box">
-                            <div class="imgBx">
-                                <img src="../../../assets/img/investment.jpg" height="300px" width="350px">
-                                <div class="centered">Investing</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a routerLink="/design/stock" href="">
-                        <div class="box">
-                            <div class="imgBx">
-                                <img src="../../../assets/img/stockmarket.jpg" height="300px" width="350px">
-                                <div class="centered">StockMarket</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a routerLink="/design/movies" href="">
-                        <div class="box">
-                            <div class="imgBx">
-                                <img src="../../../assets/img/movies.jpg" height="300px" width="350px">
-                                <div class="centered">Movies</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <br><br><br>
         </div>
+       
     </div>
-</body>
+    <button mat-raised-button [disabled]="!Selected_intrest.length" (click)="StartButton()" color="primary" style="margin-top: 10%; margin-left: 50%;height:60px;">Start Reading</button>
 
+
+</body>
 </html>
