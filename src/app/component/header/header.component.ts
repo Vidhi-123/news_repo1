@@ -3,6 +3,9 @@ import { IntrestService } from 'src/app/service/intrest.service';
 import { Router } from '@angular/router';
 import { user } from '../login/user';
 import { global } from '../global';
+import { LikedPostsService } from 'src/app/service/liked-posts.service';
+import { MatDialog } from '@angular/material/dialog';
+import { SignupComponent } from '../signup/signup.component';
 
 
 @Component({
@@ -14,15 +17,16 @@ import { global } from '../global';
 export class HeaderComponent implements OnInit {
 
   flag:boolean=true;
-
-  constructor(private _ser:IntrestService,private _router:Router,private _global:global) { }
+  log_flag:boolean=false;
+  constructor(private _ser:IntrestService,public dialog: MatDialog,private _ser1:LikedPostsService,private _router:Router,private _global:global) { }
 
 
   onClickDrp(){
 	document.getElementById('drp').classList.add('active');
 	document.getElementById('in').classList.remove('active');
   document.getElementById('de').classList.remove('active');
-	  document.getElementById('ho').classList.remove('active');
+    document.getElementById('ho').classList.remove('active');
+    document.getElementById('lik').classList.remove('active');
   }
 
   onClickde()
@@ -30,7 +34,17 @@ export class HeaderComponent implements OnInit {
     document.getElementById('drp').classList.remove('active');
 	document.getElementById('in').classList.remove('active');
   document.getElementById('de').classList.add('active');
-	  document.getElementById('ho').classList.remove('active');
+    document.getElementById('ho').classList.remove('active');
+    document.getElementById('lik').classList.remove('active');
+  }
+
+  onClicklik()
+  {
+    document.getElementById('drp').classList.remove('active');
+	document.getElementById('in').classList.remove('active');
+  document.getElementById('lik').classList.add('active');
+    document.getElementById('ho').classList.remove('active');
+    document.getElementById('de').classList.remove('active');
   }
 
 
@@ -38,23 +52,33 @@ export class HeaderComponent implements OnInit {
 	document.getElementById('ho').classList.add('active');
 	document.getElementById('in').classList.remove('active');
 	document.getElementById('de').classList.remove('active');
-	  document.getElementById('drp').classList.remove('active');
+    document.getElementById('drp').classList.remove('active');
+    document.getElementById('lik').classList.remove('active');
   }
   onClickIn()
   {
 	  document.getElementById('in').classList.add('active');
     document.getElementById('de').classList.remove('active');
 	  document.getElementById('ho').classList.remove('active');
-	  document.getElementById('drp').classList.remove('active');
+    document.getElementById('drp').classList.remove('active');
+    document.getElementById('lik').classList.remove('active');
   }
   
+
+  onSignIn()
+  {
+    this.dialog.open(SignupComponent);
+
+  }
+
   onLogOut()
   {
-    
     localStorage.clear();
     let user_id=localStorage.getItem('user_id');
     console.log(user_id);
     this._global.header_flag=false;
+    this._global.like_flag=false;
+    this.log_flag=false;
     this._router.navigate(['']);
   }
 
@@ -67,6 +91,7 @@ export class HeaderComponent implements OnInit {
     
     if(user_id!=null)
     {
+      this.log_flag=true;
       this._ser.getIntrestByUserId(user_id).subscribe(
         (data:any[])=>
         {
@@ -74,15 +99,32 @@ export class HeaderComponent implements OnInit {
           if(data.length>0)
           {
             this._global.header_flag=true;
+
     
           }
           
         }
       );
+
+      this._ser1.getLikedPostsByUserId(user_id).subscribe(
+        (data:any[])=>
+        {
+          console.log(data);
+          if(data.length>0)
+          {
+            this._global.like_flag=true;
+            
+    
+          }
+          
+        }
+      );
+
     }
     else
     {
       this._global.header_flag=false;
+      this._global.like_flag=false;
     }
     
   }

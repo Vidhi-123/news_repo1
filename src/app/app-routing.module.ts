@@ -20,6 +20,7 @@ import { CountryComponent } from './component/country/country.component';
 import {CountrycatComponent } from './component/countrycat/countrycat.component';
 import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
+import { LikedpostsComponent } from './component/likedposts/likedposts.component';
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path: '', component: HomeComponent},
@@ -40,7 +41,8 @@ const routes: Routes = [
   {path:'newsdesign',component:DesignForNewsComponent},
   {path:'country/:name',component:CountryComponent},
   {path:'countrycat',component:CountrycatComponent},
-  {path:'signup',component:SignupComponent}
+  {path:'signup',component:SignupComponent},
+  {path:'likedposts',component:LikedpostsComponent}
 ];
 
 @NgModule({

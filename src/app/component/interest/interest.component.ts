@@ -70,6 +70,8 @@ export class InterestComponent implements OnInit {
       max: 25,
       speed: 400
     });
+
+    
     this._ser.getallCateogry().subscribe(
       (data:any[])=>{
         console.log(data);

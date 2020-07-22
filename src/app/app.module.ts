@@ -22,7 +22,7 @@ import { HealthComponent } from './component/health/health.component';
 import { ScienceComponent } from './component/science/science.component';
 import { SportsComponent } from './component/sports/sports.component';
 import { TechnologyComponent } from './component/technology/technology.component';
-//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WeatherComponent } from './component/weather/weather.component';
 
 import {MatCardModule} from '@angular/material/card';
@@ -41,13 +41,11 @@ import { CountryComponent } from './component/country/country.component';
 import { CountrycatComponent } from './component/countrycat/countrycat.component';
 import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
-import { SocialLoginModule,SocialAuthServiceConfig      } from 'angularx-social-login';
-import {
-  GoogleLoginProvider,
-} from 'angularx-social-login';
+
+import { LikedpostsComponent } from './component/likedposts/likedposts.component';
 
 
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -76,7 +74,8 @@ import {
     CountryComponent,
     CountrycatComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    LikedpostsComponent
     
   ],
   imports: [
@@ -87,8 +86,8 @@ import {
     HttpClientModule,
     MatToolbarModule,
     MatCardModule,
-    SocialLoginModule,
-  
+    MatDialogModule,
+    BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
     MatFormFieldModule,
@@ -99,22 +98,7 @@ import {
     })
 
   ],
-  providers: [NewsService,WeatherService,CountryService,
-    {
-      provide: 'SocialAuthServiceConfig',
-      useValue: {
-        autoLogin: false,
-        providers: [
-          {
-            id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider(
-              '68797875695-o0ph3cfco8kju9e52clpnnpkr4rsfjvq.apps.googleusercontent.com'
-            ),
-          },
-        ],
-      } as SocialAuthServiceConfig,
-    }
-  ],
+  providers: [NewsService,WeatherService,CountryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
